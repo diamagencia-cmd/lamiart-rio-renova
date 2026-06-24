@@ -10,6 +10,13 @@ import logoTarkett from "@/assets/logo-tarkett.png.asset.json";
 import logoEucafloor from "@/assets/logo-eucafloor.png.asset.json";
 import logoQuickStep from "@/assets/logo-quick-step.png.asset.json";
 import logoDurafloor from "@/assets/logo-durafloor.png.asset.json";
+import cliRogerio from "@/assets/cliente-rogerio.png.asset.json";
+import cliClaudio from "@/assets/cliente-claudio.png.asset.json";
+import cliJose from "@/assets/cliente-jose.png.asset.json";
+import cliMarli from "@/assets/cliente-marli.png.asset.json";
+import cliLeticia from "@/assets/cliente-leticia.png.asset.json";
+import cliLais from "@/assets/cliente-lais.png.asset.json";
+import cliRodrigo from "@/assets/cliente-rodrigo.png.asset.json";
 
 const WA_GERAL =
   "https://wa.me/5521964300089?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20um%20or%C3%A7amento.";
