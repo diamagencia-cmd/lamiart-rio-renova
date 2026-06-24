@@ -10,6 +10,13 @@ import logoTarkett from "@/assets/logo-tarkett.png.asset.json";
 import logoEucafloor from "@/assets/logo-eucafloor.png.asset.json";
 import logoQuickStep from "@/assets/logo-quick-step.png.asset.json";
 import logoDurafloor from "@/assets/logo-durafloor.png.asset.json";
+import cliRogerio from "@/assets/cliente-rogerio.png.asset.json";
+import cliClaudio from "@/assets/cliente-claudio.png.asset.json";
+import cliJose from "@/assets/cliente-jose.png.asset.json";
+import cliMarli from "@/assets/cliente-marli.png.asset.json";
+import cliLeticia from "@/assets/cliente-leticia.png.asset.json";
+import cliLais from "@/assets/cliente-lais.png.asset.json";
+import cliRodrigo from "@/assets/cliente-rodrigo.png.asset.json";
 
 const WA_GERAL =
   "https://wa.me/5521964300089?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20um%20or%C3%A7amento.";
@@ -152,10 +159,7 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-beige-light/40 via-warm-white to-warm-white" />
       <div className="container-x grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
         <div className="fade-up">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-lamiart-red/10 text-lamiart-red text-xs font-semibold uppercase tracking-wide">
-            <span className="h-1.5 w-1.5 rounded-full bg-lamiart-red animate-pulse" />
-            Lamiart — Méier, Rio de Janeiro
-          </span>
+        
           <h1 className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-ink">
             Pisos vinílicos e laminados no <span className="text-lamiart-red">Rio de Janeiro</span>
           </h1>
@@ -409,13 +413,13 @@ function Marcas() {
 
 function Depoimentos() {
   const items = [
-    { name: "Ana Carolina", text: "Atendimento excelente! Instalaram o piso laminado em casa e ficou perfeito, prazo cumprido e equipe muito atenciosa." },
-    { name: "Rodrigo Souza", text: "Comprei o vinílico para o meu escritório. Acabamento impecável, sem barulho de obra e o resultado superou as expectativas." },
-    { name: "Patrícia Lima", text: "Recomendo de olhos fechados. Preço justo, parcelamento facilitado e equipe técnica muito profissional." },
-    { name: "Marcos Tavares", text: "Loja organizada e atendimento de primeira. Me explicaram tudo com calma e ajudaram a escolher o piso ideal." },
-    { name: "Juliana Ferreira", text: "Transformação total no meu apartamento! O piso laminado deixou tudo mais aconchegante. Equipe nota 10." },
-    { name: "Bruno Almeida", text: "Já é a segunda vez que compro com a Lamiart. Sempre pontuais, honestos e com produtos de qualidade." },
-    { name: "Camila Rocha", text: "Adorei o resultado do piso vinílico. Silencioso, bonito e fácil de limpar. Vale cada centavo." },
+    { name: "Rogerio Miranda", photo: cliRogerio.url, text: "Nota 10. O piso ficou ótimo, a composição com o rodapé branco muito bonita e os profissionais de instalação são excelentes." },
+    { name: "Claudio Wilson", photo: cliClaudio.url, text: "Equipe excelente, profissionais qualificados e desde o atendimento ao vendedor, em fim todos sem exceção ❗️❗️❗️ Empresa de vocês estão de parabéns, muito satisfeito com todo o serviço prestado 👏🏻🤝" },
+    { name: "José Saraiva", photo: cliJose.url, text: "Atendimento de primeira linha. Profissionais competentes para uma instalação primorosa." },
+    { name: "Marli Nascimento", photo: cliMarli.url, text: "Fui bem atendida pela vendedora Luciana e na colocação também pelos 2 profissionais que estiveram em minha casa. Até o presente momento sem reclamações." },
+    { name: "LETICIA REIS", photo: cliLeticia.url, text: "Fiz um pedido em 2019 e agora em 2023 fiz contato pelo whatsapp solicitando manutenção de algumas placas e frisos. O atendimento pelo telefone foi rápido e eficiente, consegui enviar fotos, receber um orçamento e agendar o atendimento para a semana seguinte. Durante a instalação o rapaz foi rápido e prezou pela limpeza. Estou bastante satisfeita e indico a amigos e familiares." },
+    { name: "Lais Martinelli", photo: cliLais.url, text: "Uma palavra especial para o Sr. Ricardo, o instalador do piso. Educado, profissional ótimo. Quanto à LAMIART, cliente fixa. Ótima Empresa. Parabéns pelo atendimento, orientações e serviço." },
+    { name: "Rodrigo Mello", photo: cliRodrigo.url, text: "Desde o primeiro atendimento até a conclusão do serviço de instalação, tudo transcorreu com máximo profissionalismo e clareza. O vendedor Robson, os instaladores Ricardo e Geraldo foram excelentes em tudo. Agradeço ao time da Lamiart." },
   ];
   const scrollerRef = useRef<HTMLUListElement>(null);
   const scrollBy = (dir: 1 | -1) => {
@@ -450,15 +454,18 @@ function Depoimentos() {
               key={i}
               className="snap-center shrink-0 w-[80vw] sm:w-[360px] card-soft p-6 flex flex-col"
             >
-              <div className="flex items-center gap-2 text-lamiart-red">
+              <div className="flex items-center gap-1 text-yellow-400">
                 <Star /><Star /><Star /><Star /><Star />
-                <span className="ml-auto text-[10px] uppercase tracking-wider text-warm-gray font-semibold">Google</span>
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/512px-Google_2015_logo.svg.png"
+                  alt="Google"
+                  loading="lazy"
+                  className="ml-auto h-4 w-auto"
+                />
               </div>
               <p className="mt-4 text-ink leading-relaxed">"{d.text}"</p>
               <div className="mt-5 pt-4 border-t border-border flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-lamiart-red/10 text-lamiart-red font-display font-bold grid place-items-center">
-                  {d.name[0]}
-                </div>
+                <img src={d.photo} alt={d.name} loading="lazy" className="h-10 w-10 rounded-full object-cover" />
                 <div>
                   <p className="font-display font-semibold text-ink text-sm">{d.name}</p>
                   <p className="text-xs text-warm-gray">Cliente Lamiart</p>
