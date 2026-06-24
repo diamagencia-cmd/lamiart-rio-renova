@@ -1,22 +1,22 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import heroSala from "@/assets/hero-sala.jpg";
-import lamiartLogo from "@/assets/lamiart-logo.png.asset.json";
-import pisoLaminadoBg from "@/assets/piso-laminado-bg.png.asset.json";
-import pisoVinilicoBg from "@/assets/piso-vinilico-bg.png.asset.json";
-import antesImg from "@/assets/antes-rio.png.asset.json";
-import depoisImg from "@/assets/depois-rio.png.asset.json";
-import logoTarkett from "@/assets/logo-tarkett.png.asset.json";
-import logoEucafloor from "@/assets/logo-eucafloor.png.asset.json";
-import logoQuickStep from "@/assets/logo-quick-step.png.asset.json";
-import logoDurafloor from "@/assets/logo-durafloor.png.asset.json";
-import cliRogerio from "@/assets/cliente-rogerio.png.asset.json";
-import cliClaudio from "@/assets/cliente-claudio.png.asset.json";
-import cliJose from "@/assets/cliente-jose.png.asset.json";
-import cliMarli from "@/assets/cliente-marli.png.asset.json";
-import cliLeticia from "@/assets/cliente-leticia.png.asset.json";
-import cliLais from "@/assets/cliente-lais.png.asset.json";
-import cliRodrigo from "@/assets/cliente-rodrigo.png.asset.json";
+import lamiartLogo from "@/assets/lamiart-logo.png";
+import pisoLaminadoBg from "@/assets/piso-laminado-bg.png";
+import pisoVinilicoBg from "@/assets/piso-vinilico-bg.png";
+import antesImg from "@/assets/antes-rio.png";
+import depoisImg from "@/assets/depois-rio.png";
+import logoTarkett from "@/assets/logo-tarkett.png";
+import logoEucafloor from "@/assets/logo-eucafloor.png";
+import logoQuickStep from "@/assets/logo-quick-step.png";
+import logoDurafloor from "@/assets/logo-durafloor.png";
+import cliRogerio from "@/assets/cliente-rogerio.png";
+import cliClaudio from "@/assets/cliente-claudio.png";
+import cliJose from "@/assets/cliente-jose.png";
+import cliMarli from "@/assets/cliente-marli.png";
+import cliLeticia from "@/assets/cliente-leticia.png";
+import cliLais from "@/assets/cliente-lais.png";
+import cliRodrigo from "@/assets/cliente-rodrigo.png";
 
 const WA_GERAL =
   "https://wa.me/5521964300089?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20um%20or%C3%A7amento.";
@@ -108,7 +108,7 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-40 bg-warm-white/85 backdrop-blur-md border-b border-border">
       <div className="container-x flex items-center justify-between h-16 md:h-20">
         <a href="#inicio" className="flex items-center" aria-label="Lamiart">
-          <img src={lamiartLogo.url} alt="Lamiart Pisos & Revestimentos" className="h-9 md:h-12 w-auto" />
+          <img src={lamiartLogo} alt="Lamiart Pisos & Revestimentos" className="h-9 md:h-12 w-auto" />
         </a>
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-ink/80">
           {links.map((l) => (
@@ -298,7 +298,7 @@ function Produtos() {
             highlight="Elegância, economia e praticidade"
             cta="Quero saber mais sobre piso laminado"
             href={WA_LAMINADO}
-            bgImage={pisoLaminadoBg.url}
+            bgImage={pisoLaminadoBg}
           />
           <ProductCard
             tag="Moderno e silencioso"
@@ -314,7 +314,7 @@ function Produtos() {
             highlight="Conforto, silêncio e durabilidade"
             cta="Quero saber mais sobre piso vinílico"
             href={WA_VINILICO}
-            bgImage={pisoVinilicoBg.url}
+            bgImage={pisoVinilicoBg}
           />
         </div>
       </div>
@@ -344,8 +344,8 @@ function AntesDepois() {
           aria-label="Aperte para revelar o depois"
         >
           <div className="relative aspect-[4/3] sm:aspect-[16/9]">
-            <img src={antesImg.url} alt="Antes: ambiente frio sem piso instalado" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
-            <img src={depoisImg.url} alt="Depois: ambiente renovado com piso laminado Lamiart" loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${revealed ? "opacity-100" : "opacity-0"}`} />
+            <img src={antesImg} alt="Antes: ambiente frio sem piso instalado" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={depoisImg} alt="Depois: ambiente renovado com piso laminado Lamiart" loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${revealed ? "opacity-100" : "opacity-0"}`} />
 
             <span className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-warm-white/95 text-ink text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
               {revealed ? "Depois: ambiente renovado" : "Antes: ambiente frio"}
@@ -378,10 +378,10 @@ function AntesDepois() {
 
 function Marcas() {
   const marcas = [
-    { name: "Tarkett", logo: logoTarkett.url },
-    { name: "Eucafloor", logo: logoEucafloor.url },
-    { name: "Quick-Step", logo: logoQuickStep.url },
-    { name: "Durafloor", logo: logoDurafloor.url },
+    { name: "Tarkett", logo: logoTarkett },
+    { name: "Eucafloor", logo: logoEucafloor },
+    { name: "Quick-Step", logo: logoQuickStep },
+    { name: "Durafloor", logo: logoDurafloor },
   ];
   const repeated = [...marcas, ...marcas, ...marcas];
   return (
@@ -413,13 +413,13 @@ function Marcas() {
 
 function Depoimentos() {
   const items = [
-    { name: "Rogerio Miranda", photo: cliRogerio.url, text: "Nota 10. O piso ficou ótimo, a composição com o rodapé branco muito bonita e os profissionais de instalação são excelentes." },
-    { name: "Claudio Wilson", photo: cliClaudio.url, text: "Equipe excelente, profissionais qualificados e desde o atendimento ao vendedor, em fim todos sem exceção ❗️❗️❗️ Empresa de vocês estão de parabéns, muito satisfeito com todo o serviço prestado 👏🏻🤝" },
-    { name: "José Saraiva", photo: cliJose.url, text: "Atendimento de primeira linha. Profissionais competentes para uma instalação primorosa." },
-    { name: "Marli Nascimento", photo: cliMarli.url, text: "Fui bem atendida pela vendedora Luciana e na colocação também pelos 2 profissionais que estiveram em minha casa. Até o presente momento sem reclamações." },
-    { name: "LETICIA REIS", photo: cliLeticia.url, text: "Fiz um pedido em 2019 e agora em 2023 fiz contato pelo whatsapp solicitando manutenção de algumas placas e frisos. O atendimento pelo telefone foi rápido e eficiente, consegui enviar fotos, receber um orçamento e agendar o atendimento para a semana seguinte. Durante a instalação o rapaz foi rápido e prezou pela limpeza. Estou bastante satisfeita e indico a amigos e familiares." },
-    { name: "Lais Martinelli", photo: cliLais.url, text: "Uma palavra especial para o Sr. Ricardo, o instalador do piso. Educado, profissional ótimo. Quanto à LAMIART, cliente fixa. Ótima Empresa. Parabéns pelo atendimento, orientações e serviço." },
-    { name: "Rodrigo Mello", photo: cliRodrigo.url, text: "Desde o primeiro atendimento até a conclusão do serviço de instalação, tudo transcorreu com máximo profissionalismo e clareza. O vendedor Robson, os instaladores Ricardo e Geraldo foram excelentes em tudo. Agradeço ao time da Lamiart." },
+    { name: "Rogerio Miranda", photo: cliRogerio, text: "Nota 10. O piso ficou ótimo, a composição com o rodapé branco muito bonita e os profissionais de instalação são excelentes." },
+    { name: "Claudio Wilson", photo: cliClaudio, text: "Equipe excelente, profissionais qualificados e desde o atendimento ao vendedor, em fim todos sem exceção ❗️❗️❗️ Empresa de vocês estão de parabéns, muito satisfeito com todo o serviço prestado 👏🏻🤝" },
+    { name: "José Saraiva", photo: cliJose, text: "Atendimento de primeira linha. Profissionais competentes para uma instalação primorosa." },
+    { name: "Marli Nascimento", photo: cliMarli, text: "Fui bem atendida pela vendedora Luciana e na colocação também pelos 2 profissionais que estiveram em minha casa. Até o presente momento sem reclamações." },
+    { name: "LETICIA REIS", photo: cliLeticia, text: "Fiz um pedido em 2019 e agora em 2023 fiz contato pelo whatsapp solicitando manutenção de algumas placas e frisos. O atendimento pelo telefone foi rápido e eficiente, consegui enviar fotos, receber um orçamento e agendar o atendimento para a semana seguinte. Durante a instalação o rapaz foi rápido e prezou pela limpeza. Estou bastante satisfeita e indico a amigos e familiares." },
+    { name: "Lais Martinelli", photo: cliLais, text: "Uma palavra especial para o Sr. Ricardo, o instalador do piso. Educado, profissional ótimo. Quanto à LAMIART, cliente fixa. Ótima Empresa. Parabéns pelo atendimento, orientações e serviço." },
+    { name: "Rodrigo Mello", photo: cliRodrigo, text: "Desde o primeiro atendimento até a conclusão do serviço de instalação, tudo transcorreu com máximo profissionalismo e clareza. O vendedor Robson, os instaladores Ricardo e Geraldo foram excelentes em tudo. Agradeço ao time da Lamiart." },
   ];
   const scrollerRef = useRef<HTMLUListElement>(null);
   const scrollBy = (dir: 1 | -1) => {
@@ -719,7 +719,7 @@ function Footer() {
     <footer className="bg-ink text-warm-white/80 border-t border-white/10">
       <div className="container-x py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <img src={lamiartLogo.url} alt="Lamiart" className="h-12 w-auto bg-warm-white rounded-md p-2" />
+          <img src={lamiartLogo} alt="Lamiart" className="h-12 w-auto bg-warm-white rounded-md p-2" />
           <p className="mt-3 text-sm leading-relaxed">
             Pisos, revestimentos e soluções para transformar ambientes com beleza, conforto e praticidade.
           </p>
