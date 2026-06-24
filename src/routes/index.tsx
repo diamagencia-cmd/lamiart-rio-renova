@@ -152,10 +152,7 @@ function Hero() {
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-beige-light/40 via-warm-white to-warm-white" />
       <div className="container-x grid lg:grid-cols-2 gap-10 lg:gap-14 items-center">
         <div className="fade-up">
-          <span className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-lamiart-red/10 text-lamiart-red text-xs font-semibold uppercase tracking-wide">
-            <span className="h-1.5 w-1.5 rounded-full bg-lamiart-red animate-pulse" />
-            Lamiart — Méier, Rio de Janeiro
-          </span>
+        
           <h1 className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-ink">
             Pisos vinílicos e laminados no <span className="text-lamiart-red">Rio de Janeiro</span>
           </h1>
