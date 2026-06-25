@@ -19,13 +19,13 @@ import cliLais from "@/assets/cliente-lais.png";
 import cliRodrigo from "@/assets/cliente-rodrigo.png";
 
 const WA_GERAL =
-  "https://wa.me/5521964300089?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20um%20or%C3%A7amento.";
+  "https://wa.me/5521982864431?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20um%20or%C3%A7amento.";
 const WA_LAMINADO =
-  "https://wa.me/5521964300089?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20laminado.";
+  "https://wa.me/5521982864431?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20laminado.";
 const WA_VINILICO =
-  "https://wa.me/5521964300089?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20vin%C3%ADlico.";
+  "https://wa.me/5521982864431?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20vin%C3%ADlico.";
 const WA_LAR =
-  "https://wa.me/5521964300089?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
+  "https://wa.me/5521982864431?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
 const MAPS =
   "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m6!3m5!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!16s%2Fg%2F11sfrkx9c5";
 const MAPS_REVIEWS =
@@ -637,7 +637,7 @@ function Localizacao() {
               </div>
               <div className="flex items-start gap-3">
                 <span className="font-semibold text-warm-gray w-24 shrink-0">WhatsApp</span>
-                <a href={WA_GERAL} target="_blank" rel="noopener" className="text-whatsapp font-semibold">21 96430-0089</a>
+                <a href={WA_GERAL} target="_blank" rel="noopener" className="text-whatsapp font-semibold">21 98286-4431</a>
               </div>
             </dl>
             <a href={MAPS} target="_blank" rel="noopener" className="btn-primary mt-7 w-full sm:w-auto">
@@ -737,7 +737,7 @@ function Footer() {
             <li>Rua Mário Piragibe, 43 — Méier — RJ</li>
             <li><a href="tel:+552131452004" className="hover:text-warm-white">Tel: (21) 3145-2004</a></li>
             <li><a href="tel:+552125760046" className="hover:text-warm-white">Tel: (21) 2576-0046</a></li>
-            <li><a href={WA_GERAL} target="_blank" rel="noopener" className="hover:text-warm-white">WhatsApp: 21 96430-0089</a></li>
+            <li><a href={WA_GERAL} target="_blank" rel="noopener" className="hover:text-warm-white">WhatsApp: 21 98286-4431</a></li>
           </ul>
         </div>
         <div>
