@@ -721,8 +721,6 @@ function Footer() {
           <h3 className="font-display font-semibold text-warm-white mb-3 text-sm uppercase tracking-wider">Contato</h3>
           <ul className="space-y-2 text-sm">
             <li>Rua Mário Piragibe, 43 — Méier — RJ</li>
-            <li><a href="tel:+552131452004" className="hover:text-warm-white">Tel: (21) 3145-2004</a></li>
-            <li><a href="tel:+552125760046" className="hover:text-warm-white">Tel: (21) 2576-0046</a></li>
             <li><a href={WA_GERAL} target="_blank" rel="noopener" className="hover:text-warm-white">WhatsApp: 21 99828-6443</a></li>
           </ul>
         </div>
