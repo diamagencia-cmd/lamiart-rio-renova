@@ -24,6 +24,10 @@ import lam5 from "@/assets/foto-19.png";
 import lam6 from "@/assets/foto-20.png";
 import vin1 from "@/assets/foto-21.png";
 import vin2 from "@/assets/foto-22.png";
+import vin3 from "@/assets/foto-27.png";
+import vin4 from "@/assets/foto-28.png";
+import vin5 from "@/assets/foto-29.png";
+import vin6 from "@/assets/foto-30.png";
 
 
 const WA_GERAL =
