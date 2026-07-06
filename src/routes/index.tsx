@@ -7,7 +7,7 @@ import pisoVinilicoBg from "@/assets/piso-vinilico-bg.png";
 import antesImg from "@/assets/antes-rio.png";
 import depoisImg from "@/assets/depois-rio.png";
 import logoTarkett from "@/assets/logo-tarkett.png";
-import logoEucafloor from "@/assets/logo-eucafloor.png";
+
 import logoQuickStep from "@/assets/logo-quick-step.png";
 import logoDurafloor from "@/assets/logo-durafloor.png";
 import cliRogerio from "@/assets/cliente-rogerio.png";
