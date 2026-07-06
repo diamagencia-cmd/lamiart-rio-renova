@@ -2,8 +2,8 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import heroSala from "@/assets/hero-sala.jpg";
 import lamiartLogo from "@/assets/lamiart-logo.png";
-import pisoLaminadoBg from "@/assets/piso-laminado-bg.png";
-import pisoVinilicoBg from "@/assets/piso-vinilico-bg.png";
+import pisoLaminadoBg from "@/assets/foto-13.png";
+import pisoVinilicoBg from "@/assets/foto-14.png";
 import antesImg from "@/assets/antes-rio.png";
 import depoisImg from "@/assets/depois-rio.png";
 import logoTarkett from "@/assets/logo-tarkett.png";
@@ -16,6 +16,14 @@ import cliJose from "@/assets/cliente-jose.png";
 import cliMarli from "@/assets/cliente-marli.png";
 import cliLeticia from "@/assets/cliente-leticia.png";
 import cliLais from "@/assets/cliente-lais.png";
+import lam1 from "@/assets/foto-15.png";
+import lam2 from "@/assets/foto-16.png";
+import lam3 from "@/assets/foto-17.png";
+import lam4 from "@/assets/foto-18.png";
+import lam5 from "@/assets/foto-19.png";
+import lam6 from "@/assets/foto-20.png";
+import vin1 from "@/assets/foto-21.png";
+import vin2 from "@/assets/foto-22.png";
 
 
 const WA_GERAL =
@@ -505,12 +513,8 @@ function Depoimentos() {
 }
 
 function CatalogGrid({
-  id, title, subtitle, prefix, overlay, cta, href,
-}: { id: string; title: string; subtitle: string; prefix: string; overlay: string; cta: string; href: string; }) {
-  const items = Array.from({ length: 9 }).map((_, i) => ({
-    src: `/images/${prefix}-${String(i + 1).padStart(2, "0")}.jpg`,
-    alt: `${overlay} Lamiart ${i + 1}`,
-  }));
+  id, title, subtitle, overlay, cta, href, images,
+}: { id: string; title: string; subtitle: string; overlay: string; cta: string; href: string; images: string[]; }) {
   return (
     <section id={id} className="section-pad">
       <div className="container-x">
@@ -518,15 +522,13 @@ function CatalogGrid({
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-ink leading-tight">{title}</h2>
           <p className="mt-4 text-warm-gray text-base sm:text-lg">{subtitle}</p>
         </div>
-        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
-          {items.map((it, i) => (
+        <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
+          {images.map((src, i) => (
             <figure key={i} className="group relative aspect-square overflow-hidden rounded-2xl bg-beige-light shadow-soft">
               <img
-                src={it.src} alt={it.alt} loading="lazy"
+                src={src} alt={`${overlay} Lamiart ${i + 1}`} loading="lazy"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
-                onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-wood/30 to-wood-dark/40 group-hover:opacity-0 transition-opacity" />
               <figcaption className="absolute bottom-2 left-2 right-2 bg-ink/75 text-warm-white text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-full text-center backdrop-blur-sm">
                 {overlay}
               </figcaption>
@@ -764,8 +766,8 @@ function LamiartLanding() {
         <AntesDepois />
         <Marcas />
         <Depoimentos />
-        <CatalogGrid id="catalogo" title="Catálogo de pisos laminados" subtitle="Veja algumas opções de texturas, tons e acabamentos para transformar seu ambiente." prefix="laminado" overlay="Laminado amadeirado" cta="Pedir orçamento de piso laminado" href={WA_LAMINADO} />
-        <CatalogGrid id="catalogo-vinilico" title="Catálogo de pisos vinílicos" subtitle="Opções modernas, práticas e confortáveis para casas, apartamentos, lojas e escritórios." prefix="vinilico" overlay="Vinílico moderno" cta="Pedir orçamento de piso vinílico" href={WA_VINILICO} />
+        <CatalogGrid id="catalogo" title="Catálogo de pisos laminados" subtitle="Veja algumas opções de texturas, tons e acabamentos para transformar seu ambiente." overlay="Laminados" cta="Pedir orçamento de piso laminado" href={WA_LAMINADO} images={[lam1, lam2, lam3, lam4, lam5, lam6]} />
+        <CatalogGrid id="catalogo-vinilico" title="Catálogo de pisos vinílicos" subtitle="Opções modernas, práticas e confortáveis para casas, apartamentos, lojas e escritórios." overlay="Vinílicos" cta="Pedir orçamento de piso vinílico" href={WA_VINILICO} images={[vin1, vin2, vin1, vin2, vin1, vin2]} />
         
         <Localizacao />
         <Faq />
