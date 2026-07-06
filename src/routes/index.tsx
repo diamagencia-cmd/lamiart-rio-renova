@@ -622,14 +622,6 @@ function Localizacao() {
                 <span className="text-ink">08h às 13h</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="font-semibold text-warm-gray w-24 shrink-0">Telefone</span>
-                <a href="tel:+552131452004" className="text-ink hover:text-lamiart-red">(21) 3145-2004</a>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="font-semibold text-warm-gray w-24 shrink-0">Telefone</span>
-                <a href="tel:+552125760046" className="text-ink hover:text-lamiart-red">(21) 2576-0046</a>
-              </div>
-              <div className="flex items-start gap-3">
                 <span className="font-semibold text-warm-gray w-24 shrink-0">WhatsApp</span>
                 <a href={WA_GERAL} target="_blank" rel="noopener" className="text-whatsapp font-semibold">21 99828-6443</a>
               </div>
