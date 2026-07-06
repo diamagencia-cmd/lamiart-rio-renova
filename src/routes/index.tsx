@@ -186,7 +186,7 @@ function Hero() {
           </div>
           <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 bg-lamiart-red text-white rounded-2xl px-4 py-3 shadow-red rotate-[-4deg]">
             <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider opacity-90">Lamiart</p>
-            <p className="text-sm sm:text-base font-extrabold uppercase">Venda + Instalação</p>
+            <p className="text-sm sm:text-base font-extrabold uppercase">Venda com Instalação</p>
           </div>
         </div>
       </div>
