@@ -500,11 +500,6 @@ function Depoimentos() {
         </button>
       </div>
 
-      <div className="mt-6 flex justify-center">
-        <a href={MAPS_REVIEWS} target="_blank" rel="noopener" className="btn-primary">
-          Mais avaliações
-        </a>
-      </div>
     </section>
   );
 }
