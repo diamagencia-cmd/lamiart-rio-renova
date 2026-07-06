@@ -16,7 +16,7 @@ import cliJose from "@/assets/cliente-jose.png";
 import cliMarli from "@/assets/cliente-marli.png";
 import cliLeticia from "@/assets/cliente-leticia.png";
 import cliLais from "@/assets/cliente-lais.png";
-import cliRodrigo from "@/assets/cliente-rodrigo.png";
+
 
 const WA_GERAL =
   "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20um%20or%C3%A7amento.";
