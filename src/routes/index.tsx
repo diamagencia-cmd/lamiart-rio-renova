@@ -378,12 +378,11 @@ function AntesDepois() {
 
 function Marcas() {
   const marcas = [
-    { name: "Tarkett", logo: logoTarkett },
-    { name: "Eucafloor", logo: logoEucafloor },
     { name: "Quick-Step", logo: logoQuickStep },
     { name: "Durafloor", logo: logoDurafloor },
+    { name: "Tarkett", logo: logoTarkett },
   ];
-  const repeated = [...marcas, ...marcas, ...marcas];
+  const repeated = [...marcas, ...marcas, ...marcas, ...marcas];
   return (
     <section id="marcas" className="section-pad bg-warm-white">
       <div className="container-x">
