@@ -766,7 +766,7 @@ function LamiartLanding() {
         <Depoimentos />
         <CatalogGrid id="catalogo" title="Catálogo de pisos laminados" subtitle="Veja algumas opções de texturas, tons e acabamentos para transformar seu ambiente." prefix="laminado" overlay="Laminado amadeirado" cta="Pedir orçamento de piso laminado" href={WA_LAMINADO} />
         <CatalogGrid id="catalogo-vinilico" title="Catálogo de pisos vinílicos" subtitle="Opções modernas, práticas e confortáveis para casas, apartamentos, lojas e escritórios." prefix="vinilico" overlay="Vinílico moderno" cta="Pedir orçamento de piso vinílico" href={WA_VINILICO} />
-        <RedesSociais />
+        
         <Localizacao />
         <Faq />
         <CtaFinal />
