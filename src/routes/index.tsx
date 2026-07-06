@@ -759,6 +759,36 @@ function FloatingWhatsApp() {
   );
 }
 
+import antesPisoImg from "@/assets/antes-piso.png";
+import depoisPisoImg from "@/assets/depois-piso.png";
+
+function AntesDepoisBanner() {
+  return (
+    <section className="bg-lamiart-red text-white section-pad">
+      <div className="container-x">
+        <div className="grid md:grid-cols-2 gap-8 items-center">
+          <div>
+            <span className="inline-block text-xs uppercase tracking-widest bg-white/15 px-3 py-1 rounded-full mb-4">Antes & Depois</span>
+            <h2 className="font-display text-3xl md:text-4xl font-bold leading-tight mb-4">A transformação que seu piso merece</h2>
+            <p className="text-white/90 text-lg leading-relaxed mb-6">Do piso antigo ao acabamento dos sonhos. Instalação profissional, resultado impecável e ambientes com a cara nova.</p>
+            <a href={WA_LAMINADO} className="btn-whatsapp">Quero transformar meu piso</a>
+          </div>
+          <div className="grid grid-cols-2 gap-3">
+            <figure className="relative rounded-2xl overflow-hidden shadow-warm">
+              <img src={antesPisoImg} alt="Piso antes da instalação" className="w-full h-64 md:h-80 object-cover" />
+              <figcaption className="absolute top-3 left-3 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Antes</figcaption>
+            </figure>
+            <figure className="relative rounded-2xl overflow-hidden shadow-warm">
+              <img src={depoisPisoImg} alt="Piso depois da instalação Lamiart" className="w-full h-64 md:h-80 object-cover" />
+              <figcaption className="absolute top-3 left-3 bg-white text-lamiart-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Depois</figcaption>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function LamiartLanding() {
   return (
     <div className="min-h-screen bg-warm-white text-ink">
