@@ -418,7 +418,7 @@ function Depoimentos() {
     { name: "Marli Nascimento", photo: cliMarli, text: "Fui bem atendida pela vendedora Luciana e na colocação também pelos 2 profissionais que estiveram em minha casa. Até o presente momento sem reclamações." },
     { name: "LETICIA REIS", photo: cliLeticia, text: "Fiz um pedido em 2019 e agora em 2023 fiz contato pelo whatsapp solicitando manutenção de algumas placas e frisos. O atendimento pelo telefone foi rápido e eficiente, consegui enviar fotos, receber um orçamento e agendar o atendimento para a semana seguinte. Durante a instalação o rapaz foi rápido e prezou pela limpeza. Estou bastante satisfeita e indico a amigos e familiares." },
     { name: "Lais Martinelli", photo: cliLais, text: "Uma palavra especial para o Sr. Ricardo, o instalador do piso. Educado, profissional ótimo. Quanto à LAMIART, cliente fixa. Ótima Empresa. Parabéns pelo atendimento, orientações e serviço." },
-    { name: "Rodrigo Mello", photo: cliRodrigo, text: "Desde o primeiro atendimento até a conclusão do serviço de instalação, tudo transcorreu com máximo profissionalismo e clareza. O vendedor Robson, os instaladores Ricardo e Geraldo foram excelentes em tudo. Agradeço ao time da Lamiart." },
+    
   ];
   const scrollerRef = useRef<HTMLUListElement>(null);
   const scrollBy = (dir: 1 | -1) => {
