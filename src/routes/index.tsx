@@ -7,7 +7,7 @@ import pisoVinilicoBg from "@/assets/piso-vinilico-bg.png";
 import antesImg from "@/assets/antes-rio.png";
 import depoisImg from "@/assets/depois-rio.png";
 import logoTarkett from "@/assets/logo-tarkett.png";
-import logoEucafloor from "@/assets/logo-eucafloor.png";
+
 import logoQuickStep from "@/assets/logo-quick-step.png";
 import logoDurafloor from "@/assets/logo-durafloor.png";
 import cliRogerio from "@/assets/cliente-rogerio.png";
@@ -16,16 +16,16 @@ import cliJose from "@/assets/cliente-jose.png";
 import cliMarli from "@/assets/cliente-marli.png";
 import cliLeticia from "@/assets/cliente-leticia.png";
 import cliLais from "@/assets/cliente-lais.png";
-import cliRodrigo from "@/assets/cliente-rodrigo.png";
+
 
 const WA_GERAL =
-  "https://wa.me/5521982864431?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20um%20or%C3%A7amento.";
+  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20um%20or%C3%A7amento.";
 const WA_LAMINADO =
-  "https://wa.me/5521982864431?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20laminado.";
+  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20laminado.";
 const WA_VINILICO =
-  "https://wa.me/5521982864431?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20vin%C3%ADlico.";
+  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20vin%C3%ADlico.";
 const WA_LAR =
-  "https://wa.me/5521982864431?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
+  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Lamiart%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
 const MAPS =
   "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m6!3m5!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!16s%2Fg%2F11sfrkx9c5";
 const MAPS_REVIEWS =
@@ -186,7 +186,7 @@ function Hero() {
           </div>
           <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 bg-lamiart-red text-white rounded-2xl px-4 py-3 shadow-red rotate-[-4deg]">
             <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider opacity-90">Lamiart</p>
-            <p className="text-sm sm:text-base font-extrabold uppercase">Venda + Instalação</p>
+            <p className="text-sm sm:text-base font-extrabold uppercase">Venda com Instalação</p>
           </div>
         </div>
       </div>
@@ -378,12 +378,11 @@ function AntesDepois() {
 
 function Marcas() {
   const marcas = [
-    { name: "Tarkett", logo: logoTarkett },
-    { name: "Eucafloor", logo: logoEucafloor },
     { name: "Quick-Step", logo: logoQuickStep },
     { name: "Durafloor", logo: logoDurafloor },
+    { name: "Tarkett", logo: logoTarkett },
   ];
-  const repeated = [...marcas, ...marcas, ...marcas];
+  const repeated = [...marcas, ...marcas, ...marcas, ...marcas];
   return (
     <section id="marcas" className="section-pad bg-warm-white">
       <div className="container-x">
@@ -419,7 +418,7 @@ function Depoimentos() {
     { name: "Marli Nascimento", photo: cliMarli, text: "Fui bem atendida pela vendedora Luciana e na colocação também pelos 2 profissionais que estiveram em minha casa. Até o presente momento sem reclamações." },
     { name: "LETICIA REIS", photo: cliLeticia, text: "Fiz um pedido em 2019 e agora em 2023 fiz contato pelo whatsapp solicitando manutenção de algumas placas e frisos. O atendimento pelo telefone foi rápido e eficiente, consegui enviar fotos, receber um orçamento e agendar o atendimento para a semana seguinte. Durante a instalação o rapaz foi rápido e prezou pela limpeza. Estou bastante satisfeita e indico a amigos e familiares." },
     { name: "Lais Martinelli", photo: cliLais, text: "Uma palavra especial para o Sr. Ricardo, o instalador do piso. Educado, profissional ótimo. Quanto à LAMIART, cliente fixa. Ótima Empresa. Parabéns pelo atendimento, orientações e serviço." },
-    { name: "Rodrigo Mello", photo: cliRodrigo, text: "Desde o primeiro atendimento até a conclusão do serviço de instalação, tudo transcorreu com máximo profissionalismo e clareza. O vendedor Robson, os instaladores Ricardo e Geraldo foram excelentes em tudo. Agradeço ao time da Lamiart." },
+    
   ];
   const scrollerRef = useRef<HTMLUListElement>(null);
   const scrollBy = (dir: 1 | -1) => {
@@ -501,11 +500,6 @@ function Depoimentos() {
         </button>
       </div>
 
-      <div className="mt-6 flex justify-center">
-        <a href={MAPS_REVIEWS} target="_blank" rel="noopener" className="btn-primary">
-          Mais avaliações
-        </a>
-      </div>
     </section>
   );
 }
@@ -628,16 +622,8 @@ function Localizacao() {
                 <span className="text-ink">08h às 13h</span>
               </div>
               <div className="flex items-start gap-3">
-                <span className="font-semibold text-warm-gray w-24 shrink-0">Telefone</span>
-                <a href="tel:+552131452004" className="text-ink hover:text-lamiart-red">(21) 3145-2004</a>
-              </div>
-              <div className="flex items-start gap-3">
-                <span className="font-semibold text-warm-gray w-24 shrink-0">Telefone</span>
-                <a href="tel:+552125760046" className="text-ink hover:text-lamiart-red">(21) 2576-0046</a>
-              </div>
-              <div className="flex items-start gap-3">
                 <span className="font-semibold text-warm-gray w-24 shrink-0">WhatsApp</span>
-                <a href={WA_GERAL} target="_blank" rel="noopener" className="text-whatsapp font-semibold">21 98286-4431</a>
+                <a href={WA_GERAL} target="_blank" rel="noopener" className="text-whatsapp font-semibold">21 99828-6443</a>
               </div>
             </dl>
             <a href={MAPS} target="_blank" rel="noopener" className="btn-primary mt-7 w-full sm:w-auto">
@@ -735,9 +721,7 @@ function Footer() {
           <h3 className="font-display font-semibold text-warm-white mb-3 text-sm uppercase tracking-wider">Contato</h3>
           <ul className="space-y-2 text-sm">
             <li>Rua Mário Piragibe, 43 — Méier — RJ</li>
-            <li><a href="tel:+552131452004" className="hover:text-warm-white">Tel: (21) 3145-2004</a></li>
-            <li><a href="tel:+552125760046" className="hover:text-warm-white">Tel: (21) 2576-0046</a></li>
-            <li><a href={WA_GERAL} target="_blank" rel="noopener" className="hover:text-warm-white">WhatsApp: 21 98286-4431</a></li>
+            <li><a href={WA_GERAL} target="_blank" rel="noopener" className="hover:text-warm-white">WhatsApp: 21 99828-6443</a></li>
           </ul>
         </div>
         <div>
@@ -782,7 +766,7 @@ function LamiartLanding() {
         <Depoimentos />
         <CatalogGrid id="catalogo" title="Catálogo de pisos laminados" subtitle="Veja algumas opções de texturas, tons e acabamentos para transformar seu ambiente." prefix="laminado" overlay="Laminado amadeirado" cta="Pedir orçamento de piso laminado" href={WA_LAMINADO} />
         <CatalogGrid id="catalogo-vinilico" title="Catálogo de pisos vinílicos" subtitle="Opções modernas, práticas e confortáveis para casas, apartamentos, lojas e escritórios." prefix="vinilico" overlay="Vinílico moderno" cta="Pedir orçamento de piso vinílico" href={WA_VINILICO} />
-        <RedesSociais />
+        
         <Localizacao />
         <Faq />
         <CtaFinal />
