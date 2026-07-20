@@ -186,6 +186,12 @@ function Hero() {
             <a href={WA_GERAL} target="_blank" rel="noopener" className="btn-whatsapp text-base">
               <WhatsAppIcon /> Quero um orçamento no WhatsApp
             </a>
+            <a href="tel:+5521998286443" className="btn-primary text-base">
+              <svg viewBox="0 0 24 24" className="h-5 w-5" fill="currentColor" aria-hidden>
+                <path d="M6.62 10.79c1.06 2.98 3.24 5.17 6.22 6.22l2.08-2.08a.996.996 0 011.05-.24c1.13.37 2.35.57 3.6.57.55 0 1 .45 1 1v3.5c0 .55-.45 1-1 1C10.4 21 3 13.6 3 4.5c0-.55.45-1 1-1H7.5c.55 0 1 .45 1 1 0 1.25.2 2.47.57 3.6.11.35.03.74-.24 1.02l-2.08 2.08z" />
+              </svg>
+              Ligar
+            </a>
             <a href="#produtos" className="btn-outline text-base">Ver opções de pisos</a>
           </div>
           <p className="mt-3 text-xs text-warm-gray">Atendimento rápido pelo WhatsApp · Venda e instalação no RJ</p>
