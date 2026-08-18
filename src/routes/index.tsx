@@ -173,7 +173,7 @@ function Hero() {
         <div className="fade-up">
         
           <h1 className="mt-5 font-display font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.05] text-ink">
-            Pisos Vinílicos e Laminados de Qualidade no <span className="text-lamiart-red">Rio de Janeiro</span>
+            Os Melhores Pisos Vinílicos e Laminados no <span className="text-lamiart-red">Rio de Janeiro</span>
           </h1>
           <p className="mt-5 text-base sm:text-lg text-warm-gray max-w-xl">
             Transforme sua casa ou empresa com pisos que trazem{" "}
