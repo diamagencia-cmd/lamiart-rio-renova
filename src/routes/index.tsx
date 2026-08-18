@@ -182,6 +182,9 @@ function Hero() {
           <p className="mt-4 inline-block bg-ink text-warm-white text-xs sm:text-sm font-bold uppercase tracking-wider px-4 py-2 rounded-full">
             Renove seu ambiente e parcele em até 10x
           </p>
+          <p className="mt-3 block sm:inline-block bg-ink text-warm-white text-xs sm:text-sm font-bold uppercase tracking-wider px-4 py-2 rounded-full w-fit">
+            Atendimento de segunda a domingo das 8 às 22
+          </p>
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
             <a href={WA_GERAL} target="_blank" rel="noopener" className="btn-whatsapp text-base">
               <WhatsAppIcon /> Quero um orçamento no WhatsApp
