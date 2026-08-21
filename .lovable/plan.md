@@ -1,96 +1,51 @@
-# Auditoria técnica de performance — Lamiart (sem alterações aplicadas)
+# Fase 1 — Otimização de imagens (somente imagens)
 
-Nenhum arquivo foi modificado. Abaixo o levantamento completo.
+Os arquivos WebP otimizados já foram gerados em `src/assets` (nenhum original foi apagado, nenhum código alterado ainda). Falta apenas trocar os imports — isso precisa da sua aprovação para sair do modo de planejamento.
 
-## 1. Imagens do site (formato, dimensões, peso real)
+## O que já foi gerado
 
-Total em `src/assets`: ~25 MB. Praticamente todo o peso está em PNGs de fotos (formato errado para foto).
+Antes de redimensionar, conferi o maior tamanho real de exibição de cada imagem no código. Não existe lightbox, modal ou zoom em nenhuma imagem — o único efeito é `group-hover:scale-105` (5%) no catálogo e a troca de opacidade no antes/depois. Logo, o teto de ~2x o tamanho renderizado é seguro.
 
-Em uso na página:
+| Original | Tam. original | Dimensões orig. | Novo arquivo | Novo tam. | Novas dimensões | Redução |
+|---|---|---|---|---|---|---|
+| foto-13.png | 1307 KB | 1280x960 | foto-13-optimized.webp | 86 KB | 1200x900 | -93,4% |
+| foto-14.png | 1021 KB | 1280x960 | foto-14-optimized.webp | 52 KB | 1200x900 | -94,8% |
+| antes-rio.png | 2040 KB | 1586x992 | antes-rio-optimized.webp | 28 KB | 1586x992 | -98,6% |
+| depois-rio.png | 1786 KB | 1586x992 | depois-rio-optimized.webp | 47 KB | 1586x992 | -97,3% |
+| foto-15.png | 834 KB | 808x788 | foto-15-optimized.webp | 74 KB | 808x788 | -91,0% |
+| foto-16.png | 1497 KB | 960x1280 | foto-16-optimized.webp | 90 KB | 900x1200 | -94,0% |
+| foto-17.png | 572 KB | 600x600 | foto-17-optimized.webp | 39 KB | 600x600 | -93,2% |
+| foto-18.png | 679 KB | 1032x581 | foto-18-optimized.webp | 37 KB | 1032x581 | -94,4% |
+| foto-19.png | 1206 KB | 960x1280 | foto-19-optimized.webp | 65 KB | 900x1200 | -94,5% |
+| foto-20.png | 764 KB | 1024x768 | foto-20-optimized.webp | 42 KB | 1024x768 | -94,4% |
+| foto-21.png | 1003 KB | 1600x1200 | foto-21-optimized.webp | 36 KB | 1200x900 | -96,4% |
+| foto-22.png | 1040 KB | 1280x960 | foto-22-optimized.webp | 76 KB | 1200x900 | -92,7% |
+| foto-vinilico-3.png | 244 KB | 800x800 | foto-vinilico-3-optimized.webp | 47 KB | 800x800 | -80,4% |
+| foto-28.png | 777 KB | 768x1024 | foto-28-optimized.webp | 60 KB | 768x1024 | -92,2% |
+| foto-29.png | 2754 KB | 1200x1600 | foto-29-optimized.webp | 156 KB | 900x1200 | -94,3% |
+| foto-30.png | 1788 KB | 1200x1600 | foto-30-optimized.webp | 87 KB | 900x1200 | -95,1% |
+| antes-piso.png | 374 KB | 512x512 | antes-piso-optimized.webp | 34 KB | 512x512 | -90,7% |
+| depois-piso.png | 354 KB | 512x512 | depois-piso-optimized.webp | 19 KB | 512x512 | -94,5% |
+| lamiart-logo.png | 224 KB | 1920x640 | lamiart-logo-optimized.webp | 16 KB | 480x160 | -92,7% |
+| logo-quick-step.png | 801 KB | 1672x941 | logo-quick-step-optimized.webp | 10 KB | 480x270 | -98,7% |
+| logo-durafloor.png | 767 KB | 1672x941 | logo-durafloor-optimized.webp | 5 KB | 480x270 | -99,3% |
 
-| Arquivo | Uso | Formato | Dimensões | Peso |
-|---|---|---|---|---|
-| hero-sala.jpg | Hero (imagem principal) | JPEG | 1536x1152 | 125 KB |
-| lamiart-logo.png | Header + Footer | PNG | 1920x640 | 224 KB |
-| foto-13.png | Card "Piso laminado" | PNG | 1280x960 | 1.307 KB |
-| foto-14.png | Card "Piso vinílico" | PNG | 1280x960 | 1.021 KB |
-| antes-rio.png | Transformação real (antes) | PNG | 1586x992 | 2.040 KB |
-| depois-rio.png | Transformação real (depois) | PNG | 1586x992 | 1.786 KB |
-| logo-quick-step.png | Marcas | PNG | 1672x941 | 801 KB |
-| logo-durafloor.png | Marcas | PNG | 1672x941 | 767 KB |
-| logo-tarkett.png | Marcas | PNG | 800x450 | 30 KB |
-| cliente-*.png (6) | Avaliações (40x40 px na tela) | PNG | 65x65 | 2–11 KB cada |
-| foto-15 … foto-20 | Catálogo laminados (6) | PNG | 808x788 a 1600x1200 | 572–1.206 KB cada |
-| foto-21, foto-22, foto-vinilico-3, foto-28, foto-29, foto-30 | Catálogo vinílicos (6) | PNG | 768x1024 a 1200x1600 | 244–2.754 KB cada |
-| antes-piso.png / depois-piso.png | Banner antes/depois | PNG | 512x512 | 374 / 354 KB |
-| favicon-lamiart.png | Favicon / apple-touch-icon | PNG | 172x161 | 28 KB |
+- Peso total antes: **21.841 KB (~21,3 MB)**
+- Peso total otimizado: **1.117 KB (~1,1 MB)**
+- Economia total: **-94,9% (~20,2 MB)**
 
-Não utilizados (peso morto no repositório): `logo-eucafloor.png`, `antes-piso-frio.jpg`, `depois-piso-laminado.jpg`. Também existe a função `RedesSociais()` definida mas não renderizada (código morto com 3 iframes do Instagram).
+Qualidade usada: 80–82 nas fotografias, 92 nas logos (sem compressão agressiva, transparência preservada via WebP RGBA).
 
-## 2. Imagens acima da dobra
+Não foram tocados: `hero-sala.jpg`, `cliente-*.png`, favicon, `logo-tarkett.png` (30 KB, fora da lista).
 
-- `lamiart-logo.png` (header fixo) — 1920x640, 224 KB para exibir ~48 px de altura.
-- `hero-sala.jpg` (bloco visual do hero).
+## O que falta fazer (precisa de aprovação)
 
-Nenhuma outra imagem entra no viewport inicial no mobile.
+1. Em `src/routes/index.tsx`, apontar os 20 imports afetados para os arquivos `-optimized.webp` (troca de string no caminho do import, nada mais).
+2. Em `src/routes/__root.tsx`, nada muda (favicon permanece).
+3. Rodar o build e confirmar que nenhuma imagem quebra.
 
-## 3. LCP provável no mobile
-
-`hero-sala.jpg` — no mobile o hero empilha e a imagem ocupa quase toda a largura em `aspect-[4/5]`. Já tem `fetchPriority="high"`, mas **não há `<link rel="preload">`** e o arquivo é servido em 1536 px de largura para um viewport de ~390 px. O `<h1>` é candidato secundário, e depende da fonte Poppins remota (risco de atraso de render de texto).
-
-## 4. Imagens com `loading="lazy"`
-
-Todas as imagens abaixo da dobra: cards de produto (linha 261), antes/depois (368–369), logos de marcas (425), fotos de clientes (496), catálogos (541), banner antes/depois (586, 622). Os iframes (Maps) também estão com `loading="lazy"`.
-
-Sem lazy (correto): logo do header, hero.
-Faltando lazy: as duas imagens do `AntesDepoisBanner` nas linhas 787 e 791 e a logo do footer (linha 723) — estão sem `loading="lazy"`.
-
-## 5. Imagens sem `width`/`height` explícitos
-
-**Todas** — nenhum `<img>` do projeto tem `width`/`height`. O layout é estabilizado por classes (`aspect-*`, `h-64`, `h-9`), o que evita CLS visível, mas o navegador não reserva espaço antes do CSS aplicar e os atributos ainda são recomendados pelo Lighthouse.
-
-## 6. Google Fonts
-
-Carregado em `src/routes/__root.tsx`, uma única folha com 3 famílias:
-
-- Poppins 400, 500, 600, 700, 800 — usada (`font-display`); em uso real apenas 600, 700, 800 (e 400 herdado em nenhum ponto).
-- Inter 400, 500, 600 — usada como `font-sans` (corpo).
-- **Playfair Display 600, 700 — declarada em `styles.css` como `--font-serif` e nunca usada em nenhum componente.** Download 100% desperdiçado.
-
-Há `preconnect` para fonts.googleapis.com e fonts.gstatic.com, mas não há `display=swap` faltando (já está presente) nem preload da folha.
-
-## 7. Recursos que bloqueiam renderização
-
-- `styles.css` (link no `<head>`) — bloqueante, esperado.
-- Folha do Google Fonts — **bloqueante e em domínio terceiro**; é o principal atraso de first render junto com o CSS.
-- `gtag.js` (AW-18382294629) — `async`, não bloqueia parse, mas compete por banda no início do carregamento.
-- Snippet inline do gtag — execução mínima, não bloqueante de forma relevante.
-- Nenhum JS de terceiros além do gtag; os iframes do Maps são lazy.
-
-## 8. Elemento `<dl>` da seção de endereço
-
-`src/routes/index.tsx`, linha 630 (seção `Localizacao`, card "Endereço e atendimento").
-
-Estrutura **semanticamente incorreta**: o `<dl>` contém três `<div>` com `<span>`/`<a>` como filhos, sem nenhum `<dt>` ou `<dd>`. Um `<dl>` válido exige pares `<dt>`/`<dd>` (podendo ser agrupados por `<div>`). Hoje os rótulos "Seg a Sex", "Sábado", "WhatsApp" e seus valores não são expostos como lista de definições para leitores de tela nem para o Google.
-
-Correção sem impacto visual: trocar cada `<span>` de rótulo por `<dt>` e cada valor por `<dd>`, mantendo exatamente as mesmas classes (`dt`/`dd` recebem `display` do flex do pai; `dd` precisa de `margin-inline-start: 0`, resolvido com a classe `m-0`).
-
-## Próximos passos sugeridos (a executar somente após sua aprovação)
-
-Todos preservam pixel-a-pixel o design, textos, cores, espaçamentos e funcionalidades:
-
-1. Converter as fotos PNG para JPEG/WebP com qualidade alta e redimensionar para o tamanho máximo realmente exibido — redução esperada de ~25 MB para ~2 MB.
-2. Servir variantes responsivas (`srcset`/`sizes`) via `vite-imagetools`, incluindo a imagem do hero.
-3. Adicionar `<link rel="preload" as="image" fetchpriority="high">` para o LCP do hero na `head()` da rota `/`.
-4. Reduzir a logo (1920x640 → ~480x160) e as logos de marcas (1672x941 → ~400x225).
-5. Reduzir as fotos de clientes 65x65 e adicionar `width`/`height` em todos os `<img>`.
-6. Remover Playfair Display da folha do Google Fonts e o token `--font-serif` não utilizado; remover os pesos de Poppins/Inter não usados.
-7. Adicionar `loading="lazy"` + `decoding="async"` nas imagens do banner antes/depois e na logo do footer.
-8. Corrigir o `<dl>` com `<dt>`/`<dd>` mantendo as classes.
-9. Remover código morto: `RedesSociais()` e os 3 assets não utilizados.
+Nenhum original é deletado. Nada de CSS, JS, HTML, fontes, preload/fetchpriority, SEO ou Google Tag é alterado. Nenhuma dependência nova é instalada (a conversão foi feita com Pillow, já presente no sandbox).
 
 ## Detalhes técnicos
 
-- Nenhuma alteração em `vite.config.ts` além de eventual registro do plugin `imagetools`; nada de `ssr.external`.
-- Preload do LCP entra apenas no `head()` de `src/routes/index.tsx`, não no `__root.tsx`.
-- Conversão de imagens feita offline (sharp/PIL no sandbox), gravando arquivos físicos em `src/assets` para funcionar no Vercel — sem dependência de CDN.
+Os `<img>` continuam com as mesmas classes (`object-cover`, `object-contain`, `aspect-*`, alturas fixas), então proporção, recorte e responsividade permanecem idênticos. As reduções de dimensão respeitam ≥2x o maior tamanho renderizado: cards de produto ~600 px de largura (→1200), catálogo em 2 colunas ~600 px (→1200), antes/depois em largura de container 1216 px (dimensão original mantida), logo da Lamiart renderizada a 48 px de altura (→160), logos de marcas em caixa 240x112 (→480x270).
