@@ -10,6 +10,8 @@ import {
 import { useEffect, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
+import interVariableFont from "../assets/fonts/inter-variable-latin.woff2?url";
+import poppins800Font from "../assets/fonts/poppins-800-latin.woff2?url";
 import faviconAsset from "../assets/favicon-lamiart.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
