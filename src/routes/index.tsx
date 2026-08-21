@@ -65,7 +65,7 @@ export const Route = createFileRoute("/")({
       { name: "twitter:description", content: SITE_DESC },
       { name: "twitter:image", content: heroSala },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [{ rel: "canonical", href: "https://lamiartrio.com.br/" }],
     scripts: [
       {
         type: "application/ld+json",
