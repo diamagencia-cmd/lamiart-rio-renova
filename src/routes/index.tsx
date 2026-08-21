@@ -629,16 +629,18 @@ function Localizacao() {
             <p className="mt-3 text-ink">Rua Mário Piragibe, 43 — Méier — RJ</p>
             <dl className="mt-5 space-y-3 text-sm">
               <div className="flex items-start gap-3">
-                <span className="font-semibold text-warm-gray w-24 shrink-0">Seg a Sex</span>
-                <span className="text-ink">08h às 17h</span>
+                <dt className="font-semibold text-warm-gray w-24 shrink-0">Seg a Sex</dt>
+                <dd className="text-ink m-0">08h às 17h</dd>
               </div>
               <div className="flex items-start gap-3">
-                <span className="font-semibold text-warm-gray w-24 shrink-0">Sábado</span>
-                <span className="text-ink">08h às 13h</span>
+                <dt className="font-semibold text-warm-gray w-24 shrink-0">Sábado</dt>
+                <dd className="text-ink m-0">08h às 13h</dd>
               </div>
               <div className="flex items-start gap-3">
-                <span className="font-semibold text-warm-gray w-24 shrink-0">WhatsApp</span>
-                <a href={WA_GERAL} target="_blank" rel="noopener" className="text-whatsapp font-semibold">21 99828-6443</a>
+                <dt className="font-semibold text-warm-gray w-24 shrink-0">WhatsApp</dt>
+                <dd className="m-0">
+                  <a href={WA_GERAL} target="_blank" rel="noopener" className="text-whatsapp font-semibold">21 99828-6443</a>
+                </dd>
               </div>
             </dl>
             <a href={MAPS} target="_blank" rel="noopener" className="btn-primary mt-7 w-full sm:w-auto">
