@@ -47,7 +47,7 @@
 
   --font-display: "Poppins", system-ui, sans-serif;
   --font-sans: "Inter", system-ui, sans-serif;
-  --font-serif: "Playfair Display", Georgia, serif;
+  
 
   --shadow-soft: 0 4px 20px -8px color-mix(in oklab, var(--ink) 18%, transparent);
   --shadow-warm: 0 20px 50px -20px color-mix(in oklab, var(--wood-dark) 35%, transparent);
