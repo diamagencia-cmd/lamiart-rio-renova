@@ -1,53 +1,29 @@
-# Fase 3 — Otimização do LCP (apenas prioridade de carregamento)
+# Prioridade das imagens acima da dobra — análise
 
-## Estado atual — logo do header
-- Arquivo: `src/assets/lamiart-logo-optimized.webp`, 16,8 KB, 480x160.
-- Marcação (`src/routes/index.tsx`, linha 123): `src`, `alt`, `width={480}`, `height={160}`, classe `h-9 md:h-12 w-auto`.
-- Sem `loading` (portanto eager), sem `decoding`, **sem `fetchPriority`**.
-- Está no HTML inicial (header renderizado no SSR), logo é descobrível pelo pre-scanner.
+## Estado real do código (verificado agora)
+- `src/routes/index.tsx` linha 123 (logo do header): já possui `fetchPriority="high"` (adicionado na medição anterior).
+- `src/routes/index.tsx` linha 205 (hero): já possui `fetchPriority="high"`.
+- Nenhuma das duas usa `loading="lazy"`; ambas estão no HTML inicial.
+- Não existe `<link rel="preload">` para imagens.
 
-## Estado atual — hero
-- Arquivo: `src/assets/hero-sala.jpg`, 128 KB, 1536x1152.
-- Marcação (linha 205): `width`, `height`, `fetchPriority="high"`.
-- No mobile o layout é `grid lg:grid-cols-2`, ou seja, no celular a coluna da imagem fica **abaixo** do texto do hero — fora da primeira dobra. Por isso o Lighthouse mobile elege o logo como LCP, e o `fetchPriority="high"` do hero está priorizando um recurso que nem entra no LCP naquela viewport.
+Conclusão: a configuração que você pediu para avaliar **já é exatamente a configuração atual**. Nenhuma alteração de código é necessária.
 
-## Diagnóstico dos ~520 ms de "atraso no carregamento do recurso"
-O logo é descoberto cedo, mas entra na fila com **prioridade baixa**: o Chrome atribui `Low` a imagens até o layout confirmar que estão na viewport, e só então promove. Antes dele, disputam a banda:
-1. o CSS da rota (bloqueante) e o CSS do Google Fonts (domínio externo, `preconnect` já existe mas ainda há handshake + download);
-2. os módulos JS do bundle (`modulepreload`, prioridade alta);
-3. o `gtag.js` (async, mas já enfileirado);
-4. o `hero-sala.jpg` com `fetchpriority="high"` — 128 KB tratados como mais importantes que o LCP real.
+## Recomendação: manter `high` nas duas
+Sim, é tecnicamente adequado. Motivos:
+- Os testes A e B mostram que o elemento LCP alterna entre logo e hero conforme timing/viewport. Priorizar apenas um deixa o outro cenário sem proteção — foi o que produziu o LCP de 5,3 s no Teste B.
+- `fetchpriority` não reserva banda exclusiva; apenas reordena a fila do navegador. Com 16 KB + 125 KB, os dois juntos cabem folgadamente em qualquer conexão que o Lighthouse mobile simula (~1,6 Mbps ⇒ ~0,7 s para os dois, e o logo termina em ~80 ms).
+- O logo, sendo 8x menor, é servido praticamente "de graça" antes do hero, então subir sua prioridade não atrasa o hero de forma mensurável.
 
-Com TTFB de ~20 ms, praticamente todo o atraso é fila/prioridade, não servidor. É exatamente o cenário que `fetchpriority="high"` resolve.
+## Riscos
+- Risco real: baixo. O único efeito colateral possível é que as duas imagens competem com o CSS e o JS na fila inicial; como `high` em imagem não ultrapassa CSS bloqueante, não há inversão perigosa.
+- Risco de diluição: se mais recursos forem marcados como `high` no futuro, o sinal perde valor. Regra a manter: no máximo estes dois.
+- A variação 90 vs 75 entre execuções sugere que boa parte da diferença é ruído de rede/ambiente do Lighthouse, não configuração. Duas ou três execuções por cenário são necessárias antes de concluir qualquer ganho.
 
-## Alteração exata recomendada
-Somente dois atributos, no arquivo `src/routes/index.tsx`:
+## Preload — concordo em não usar agora
+Ambas as imagens já são descobertas pelo pre-scanner no HTML inicial, então `preload` não antecipa a descoberta; só duplicaria a prioridade que `fetchpriority` já dá. Além disso, o hash do Vite nos nomes dos arquivos torna fácil errar a URL do preload e baixar a imagem duas vezes.
 
-1. Linha 123 (logo do header): adicionar `fetchPriority="high"`.
-2. Linha 205 (hero): **remover** `fetchPriority="high"` (volta à prioridade normal/automática do navegador; nada mais muda — `width`, `height` e classes permanecem).
+## Alternativa (só se a medição futura mostrar o hero atrasando)
+Se, com as duas em `high`, o hero continuar sendo o LCP lento no mobile: o próximo passo correto não é mexer em prioridade, e sim reduzir o peso/resolução entregue no mobile (o arquivo tem 1536x1152 para uma coluna que no celular fica abaixo do texto). Isso seria uma fase separada, fora do escopo atual.
 
-Nenhuma outra linha, nenhum outro arquivo, nenhuma dependência.
-
-## Preload: recomendação — NÃO usar
-Motivo técnico: o `<img>` do logo já está no HTML inicial e o Lighthouse confirma que é descobrível; um `<link rel="preload">` não adiantaria a *descoberta*, apenas a *prioridade* — e isso o `fetchpriority="high"` no próprio `<img>` já faz, com uma linha só e sem superfície de erro.
-
-Se ainda assim fosse usado, valem as respostas às suas perguntas 5 e 6:
-- o `preload` **precisaria** de `fetchpriority="high"` também; sem isso o alerta do Lighthouse permaneceria, pois a prioridade seria herdada como padrão de imagem;
-- há risco real de **download duplicado** se a URL do preload não for byte-a-byte igual à do `src`. O asset passa pelo Vite e recebe hash no nome, então a URL só coincide se importada do mesmo módulo; qualquer caminho escrito à mão (`/assets/lamiart-logo...`) quebra na próxima build e baixa duas vezes. Mais um motivo para não usar.
-
-## Risco de competição entre hero e logo
-Hoje existe competição e ela é contra o LCP: o único recurso marcado como `high` é o que **não** é o LCP no mobile. Depois da mudança há exatamente um recurso `high` (o logo), e o hero volta a ser carregado com prioridade normal, subindo naturalmente quando o layout o coloca na viewport.
-
-Contrapartida honesta: no desktop, onde o hero fica na primeira dobra, é possível que ele seja o elemento LCP. Retirar o `fetchpriority` de lá pode piorar o LCP desktop em algumas dezenas de ms. Como a meta declarada é o Lighthouse mobile e você não quer dois recursos disputando prioridade alta, a recomendação é a de cima. Se preferir proteger o desktop, a alternativa é manter o `high` no hero e apenas adicionar no logo — mas aí a competição continua.
-
-## Impacto esperado (mobile)
-- Atraso de carregamento do logo: ~520 ms → estimado 150–250 ms.
-- LCP: ~2,9 s → estimado ~2,4–2,6 s.
-- CLS: inalterado (0). TBT: inalterado. Aparência: idêntica — `fetchpriority` não afeta pintura nem layout.
-- O alerta "fetchpriority adequada" do Lighthouse passa a ser atendido.
-
-## Fora do escopo (não será tocado)
-Google Fonts, CSS, JavaScript, arquivos de imagem, compressão, `srcset`/`sizes`, Google Tag, SEO, HTML semântico, `loading="lazy"` das imagens abaixo da dobra, layout e visual.
-
-## Validação
-Build completo e conferência visual (desktop e mobile) para confirmar que nada mudou de aparência.
+## Ação proposta nesta fase
+Nenhuma alteração de arquivo. Apenas confirmar o estado atual e medir novamente (3 execuções mobile) para separar ganho real de ruído.
