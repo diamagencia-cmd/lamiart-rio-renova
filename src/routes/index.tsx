@@ -1,33 +1,33 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import heroSala from "@/assets/hero-sala.jpg";
-import lamiartLogo from "@/assets/lamiart-logo.png";
-import pisoLaminadoBg from "@/assets/foto-13.png";
-import pisoVinilicoBg from "@/assets/foto-14.png";
-import antesImg from "@/assets/antes-rio.png";
-import depoisImg from "@/assets/depois-rio.png";
+import lamiartLogo from "@/assets/lamiart-logo-optimized.webp";
+import pisoLaminadoBg from "@/assets/foto-13-optimized.webp";
+import pisoVinilicoBg from "@/assets/foto-14-optimized.webp";
+import antesImg from "@/assets/antes-rio-optimized.webp";
+import depoisImg from "@/assets/depois-rio-optimized.webp";
 import logoTarkett from "@/assets/logo-tarkett.png";
 
-import logoQuickStep from "@/assets/logo-quick-step.png";
-import logoDurafloor from "@/assets/logo-durafloor.png";
+import logoQuickStep from "@/assets/logo-quick-step-optimized.webp";
+import logoDurafloor from "@/assets/logo-durafloor-optimized.webp";
 import cliRogerio from "@/assets/cliente-rogerio.png";
 import cliClaudio from "@/assets/cliente-claudio.png";
 import cliJose from "@/assets/cliente-jose.png";
 import cliMarli from "@/assets/cliente-marli.png";
 import cliLeticia from "@/assets/cliente-leticia.png";
 import cliLais from "@/assets/cliente-lais.png";
-import lam1 from "@/assets/foto-15.png";
-import lam2 from "@/assets/foto-16.png";
-import lam3 from "@/assets/foto-17.png";
-import lam4 from "@/assets/foto-18.png";
-import lam5 from "@/assets/foto-19.png";
-import lam6 from "@/assets/foto-20.png";
-import vin1 from "@/assets/foto-21.png";
-import vin2 from "@/assets/foto-22.png";
-import vin3 from "@/assets/foto-vinilico-3.png";
-import vin4 from "@/assets/foto-28.png";
-import vin5 from "@/assets/foto-29.png";
-import vin6 from "@/assets/foto-30.png";
+import lam1 from "@/assets/foto-15-optimized.webp";
+import lam2 from "@/assets/foto-16-optimized.webp";
+import lam3 from "@/assets/foto-17-optimized.webp";
+import lam4 from "@/assets/foto-18-optimized.webp";
+import lam5 from "@/assets/foto-19-optimized.webp";
+import lam6 from "@/assets/foto-20-optimized.webp";
+import vin1 from "@/assets/foto-21-optimized.webp";
+import vin2 from "@/assets/foto-22-optimized.webp";
+import vin3 from "@/assets/foto-vinilico-3-optimized.webp";
+import vin4 from "@/assets/foto-28-optimized.webp";
+import vin5 from "@/assets/foto-29-optimized.webp";
+import vin6 from "@/assets/foto-30-optimized.webp";
 
 
 const WA_GERAL =
@@ -768,8 +768,8 @@ function FloatingWhatsApp() {
   );
 }
 
-import antesPisoImg from "@/assets/antes-piso.png";
-import depoisPisoImg from "@/assets/depois-piso.png";
+import antesPisoImg from "@/assets/antes-piso-optimized.webp";
+import depoisPisoImg from "@/assets/depois-piso-optimized.webp";
 
 function AntesDepoisBanner() {
   return (
