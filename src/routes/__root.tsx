@@ -12,7 +12,7 @@ import { useEffect, type ReactNode } from "react";
 import appCss from "../styles.css?url";
 import interVariableFont from "../assets/fonts/inter-variable-latin.woff2?url";
 import poppins800Font from "../assets/fonts/poppins-800-latin.woff2?url";
-import faviconAsset from "../assets/favicon-lamiart.png";
+
 import { reportLovableError } from "../lib/lovable-error-reporting";
 
 function NotFoundComponent() {
@@ -101,8 +101,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         type: "font/woff2",
         crossOrigin: "anonymous",
       },
-      { rel: "icon", type: "image/png", href: faviconAsset },
-      { rel: "apple-touch-icon", href: faviconAsset },
+      { rel: "icon", type: "image/png", sizes: "192x192", href: "/favicon.png" },
+      { rel: "apple-touch-icon", sizes: "180x180", href: "/apple-touch-icon.png" },
     ],
     scripts: [
       { src: "https://www.googletagmanager.com/gtag/js?id=AW-18382294629", async: true },
