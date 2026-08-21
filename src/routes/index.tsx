@@ -120,7 +120,7 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-40 bg-warm-white/85 backdrop-blur-md border-b border-border">
       <div className="container-x flex items-center justify-between h-16 md:h-20">
         <a href="#inicio" className="flex items-center" aria-label="Lamiart">
-          <img src={lamiartLogo} alt="Lamiart Pisos & Revestimentos" width={480} height={160} className="h-9 md:h-12 w-auto" />
+          <img src={lamiartLogo} alt="Lamiart Pisos & Revestimentos" width={480} height={160} className="h-9 md:h-12 w-auto" fetchPriority="high" />
         </a>
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-ink/80">
           {links.map((l) => (
