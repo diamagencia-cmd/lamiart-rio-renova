@@ -44,7 +44,7 @@ const MAPS_REVIEWS =
   "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m8!3m7!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!9m1!1b1!16s%2Fg%2F11sfrkx9c5";
 const MAPS_EMBED =
   "https://www.google.com/maps?q=L%C3%A2miart+Pisos+e+Revestimentos+Ltda,+Rua+M%C3%A1rio+Piragibe,+43,+M%C3%A9ier,+Rio+de+Janeiro&output=embed";
-const INSTAGRAM = "https://www.instagram.com/lamiart_decoracao/";
+const INSTAGRAM = "https://www.instagram.com/lamiartpisosrepres/?hl=en";
 const FACEBOOK = "https://www.facebook.com/lamiartdecoracao/?locale=pt_BR";
 
 const SITE_TITLE = "Pisos Vinílicos e Laminados no Rio de Janeiro | Lamiart";
@@ -744,8 +744,7 @@ function Footer() {
         <div>
           <h3 className="font-display font-semibold text-warm-white mb-3 text-sm uppercase tracking-wider">Redes sociais</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href={INSTAGRAM} target="_blank" rel="noopener" className="hover:text-warm-white">Instagram @lamiart_decoracao</a></li>
-            <li><a href={FACEBOOK} target="_blank" rel="noopener" className="hover:text-warm-white">Facebook /lamiartdecoracao</a></li>
+            <li><a href={INSTAGRAM} target="_blank" rel="noopener" className="hover:text-warm-white">Instagram @lamiartpisosrepres</a></li>
           </ul>
         </div>
       </div>
