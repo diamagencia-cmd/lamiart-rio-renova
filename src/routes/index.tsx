@@ -120,7 +120,7 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-40 bg-warm-white/85 backdrop-blur-md border-b border-border">
       <div className="container-x flex items-center justify-between h-16 md:h-20">
         <a href="#inicio" className="flex items-center" aria-label="Lamiart">
-          <img src={lamiartLogo} alt="Lamiart Pisos & Revestimentos" className="h-9 md:h-12 w-auto" />
+          <img src={lamiartLogo} alt="Lamiart Pisos & Revestimentos" width={480} height={160} className="h-9 md:h-12 w-auto" />
         </a>
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-ink/80">
           {links.map((l) => (
@@ -202,7 +202,7 @@ function Hero() {
 
         <div className="relative fade-up">
           <div className="relative rounded-3xl overflow-hidden shadow-warm aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5]">
-            <img src={heroSala} alt="Sala aconchegante com piso laminado" className="w-full h-full object-cover" fetchPriority="high" />
+            <img src={heroSala} alt="Sala aconchegante com piso laminado" width={1536} height={1152} className="w-full h-full object-cover" fetchPriority="high" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
           </div>
           <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 bg-lamiart-red text-white rounded-2xl px-4 py-3 shadow-red rotate-[-4deg]">
@@ -258,7 +258,7 @@ function ProductCard({
   return (
     <article className="card-soft overflow-hidden flex flex-col">
       <div className="relative h-56 sm:h-64 flex items-end p-6">
-        <img src={bgImage} alt={title} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <img src={bgImage} alt={title} width={1200} height={900} className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
         <div className="absolute inset-0 bg-gradient-to-t from-ink/75 via-ink/30 to-transparent" />
         <div className="relative">
           <span className="inline-block bg-warm-white/95 text-ink text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
@@ -365,8 +365,8 @@ function AntesDepois() {
           aria-label="Aperte para revelar o depois"
         >
           <div className="relative aspect-[4/3] sm:aspect-[16/9]">
-            <img src={antesImg} alt="Antes: ambiente frio sem piso instalado" loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
-            <img src={depoisImg} alt="Depois: ambiente renovado com piso laminado Lamiart" loading="lazy" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${revealed ? "opacity-100" : "opacity-0"}`} />
+            <img src={antesImg} alt="Antes: ambiente frio sem piso instalado" width={1586} height={992} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
+            <img src={depoisImg} alt="Depois: ambiente renovado com piso laminado Lamiart" width={1586} height={992} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${revealed ? "opacity-100" : "opacity-0"}`} />
 
             <span className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-warm-white/95 text-ink text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
               {revealed ? "Depois: ambiente renovado" : "Antes: ambiente frio"}
@@ -399,9 +399,9 @@ function AntesDepois() {
 
 function Marcas() {
   const marcas = [
-    { name: "Quick-Step", logo: logoQuickStep },
-    { name: "Durafloor", logo: logoDurafloor },
-    { name: "Tarkett", logo: logoTarkett },
+    { name: "Quick-Step", logo: logoQuickStep, w: 480, h: 270 },
+    { name: "Durafloor", logo: logoDurafloor, w: 480, h: 270 },
+    { name: "Tarkett", logo: logoTarkett, w: 800, h: 450 },
   ];
   const repeated = [...marcas, ...marcas, ...marcas, ...marcas];
   return (
@@ -422,7 +422,7 @@ function Marcas() {
         <div className="marquee-track gap-8 px-5">
           {repeated.map((m, i) => (
             <div key={`${m.name}-${i}`} className="shrink-0 w-48 sm:w-60 h-24 sm:h-28 grid place-items-center px-4">
-              <img src={m.logo} alt={m.name} loading="lazy" className="max-h-full max-w-full object-contain" />
+              <img src={m.logo} alt={m.name} width={m.w} height={m.h} loading="lazy" decoding="async" className="max-h-full max-w-full object-contain" />
             </div>
           ))}
         </div>
@@ -493,7 +493,7 @@ function Depoimentos() {
               </div>
               <p className="mt-4 text-ink leading-relaxed">"{d.text}"</p>
               <div className="mt-5 pt-4 border-t border-border flex items-center gap-3">
-                <img src={d.photo} alt={d.name} loading="lazy" className="h-10 w-10 rounded-full object-cover" />
+                <img src={d.photo} alt={d.name} width={65} height={65} loading="lazy" decoding="async" className="h-10 w-10 rounded-full object-cover" />
                 <div>
                   <p className="font-display font-semibold text-ink text-sm">{d.name}</p>
                   <p className="text-xs text-warm-gray">Cliente Lamiart</p>
@@ -527,7 +527,7 @@ function Depoimentos() {
 
 function CatalogGrid({
   id, title, subtitle, overlay, cta, href, images,
-}: { id: string; title: string; subtitle: string; overlay: string; cta: string; href: string; images: string[]; }) {
+}: { id: string; title: string; subtitle: string; overlay: string; cta: string; href: string; images: { src: string; w: number; h: number }[]; }) {
   return (
     <section id={id} className="section-pad">
       <div className="container-x">
@@ -536,10 +536,10 @@ function CatalogGrid({
           <p className="mt-4 text-warm-gray text-base sm:text-lg">{subtitle}</p>
         </div>
         <div className="mt-8 grid grid-cols-2 gap-3 sm:gap-4">
-          {images.map((src, i) => (
+          {images.map(({ src, w, h }, i) => (
             <figure key={i} className="group relative aspect-square overflow-hidden rounded-2xl bg-beige-light shadow-soft">
               <img
-                src={src} alt={`${overlay} Lamiart ${i + 1}`} loading="lazy"
+                src={src} alt={`${overlay} Lamiart ${i + 1}`} width={w} height={h} loading="lazy" decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <figcaption className="absolute bottom-2 left-2 right-2 bg-ink/75 text-warm-white text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-full text-center backdrop-blur-sm">
@@ -720,7 +720,7 @@ function Footer() {
     <footer className="bg-ink text-warm-white/80 border-t border-white/10">
       <div className="container-x py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <img src={lamiartLogo} alt="Lamiart" className="h-12 w-auto bg-warm-white rounded-md p-2" />
+          <img src={lamiartLogo} alt="Lamiart" width={480} height={160} loading="lazy" decoding="async" className="h-12 w-auto bg-warm-white rounded-md p-2" />
           <p className="mt-3 text-sm leading-relaxed">
             Pisos, revestimentos e soluções para transformar ambientes com beleza, conforto e praticidade.
           </p>
@@ -784,11 +784,11 @@ function AntesDepoisBanner() {
           </div>
           <div className="grid grid-cols-2 gap-3">
             <figure className="relative rounded-2xl overflow-hidden shadow-warm">
-              <img src={antesPisoImg} alt="Piso antes da instalação" className="w-full h-64 md:h-80 object-cover" />
+              <img src={antesPisoImg} alt="Piso antes da instalação" width={512} height={512} loading="lazy" decoding="async" className="w-full h-64 md:h-80 object-cover" />
               <figcaption className="absolute top-3 left-3 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Antes</figcaption>
             </figure>
             <figure className="relative rounded-2xl overflow-hidden shadow-warm">
-              <img src={depoisPisoImg} alt="Piso depois da instalação Lamiart" className="w-full h-64 md:h-80 object-cover" />
+              <img src={depoisPisoImg} alt="Piso depois da instalação Lamiart" width={512} height={512} loading="lazy" decoding="async" className="w-full h-64 md:h-80 object-cover" />
               <figcaption className="absolute top-3 left-3 bg-white text-lamiart-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Depois</figcaption>
             </figure>
           </div>
@@ -809,9 +809,9 @@ function LamiartLanding() {
         <AntesDepois />
         <Marcas />
         <Depoimentos />
-        <CatalogGrid id="catalogo" title="Catálogo de pisos laminados" subtitle="Veja algumas opções de texturas, tons e acabamentos para transformar seu ambiente." overlay="Laminados" cta="Pedir orçamento de piso laminado" href={WA_LAMINADO} images={[lam1, lam2, lam3, lam4, lam5, lam6]} />
+        <CatalogGrid id="catalogo" title="Catálogo de pisos laminados" subtitle="Veja algumas opções de texturas, tons e acabamentos para transformar seu ambiente." overlay="Laminados" cta="Pedir orçamento de piso laminado" href={WA_LAMINADO} images={[{ src: lam1, w: 808, h: 788 }, { src: lam2, w: 900, h: 1200 }, { src: lam3, w: 600, h: 600 }, { src: lam4, w: 1032, h: 581 }, { src: lam5, w: 900, h: 1200 }, { src: lam6, w: 1024, h: 768 }]} />
         <AntesDepoisBanner />
-        <CatalogGrid id="catalogo-vinilico" title="Catálogo de pisos vinílicos" subtitle="Opções modernas, práticas e confortáveis para casas, apartamentos, lojas e escritórios." overlay="Vinílicos" cta="Pedir orçamento de piso vinílico" href={WA_VINILICO} images={[vin1, vin2, vin3, vin4, vin5, vin6]} />
+        <CatalogGrid id="catalogo-vinilico" title="Catálogo de pisos vinílicos" subtitle="Opções modernas, práticas e confortáveis para casas, apartamentos, lojas e escritórios." overlay="Vinílicos" cta="Pedir orçamento de piso vinílico" href={WA_VINILICO} images={[{ src: vin1, w: 1200, h: 900 }, { src: vin2, w: 1200, h: 900 }, { src: vin3, w: 800, h: 800 }, { src: vin4, w: 768, h: 1024 }, { src: vin5, w: 900, h: 1200 }, { src: vin6, w: 900, h: 1200 }]} />
         
         <Localizacao />
         <Faq />
