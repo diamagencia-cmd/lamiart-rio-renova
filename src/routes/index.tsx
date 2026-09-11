@@ -89,7 +89,7 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: LamiartLanding,
+  component: PisosLaminadosRJLanding,
 });
 
 const WhatsAppIcon = ({ className = "h-5 w-5" }: { className?: string }) => (
@@ -799,7 +799,7 @@ function AntesDepoisBanner() {
   );
 }
 
-function LamiartLanding() {
+function PisosLaminadosRJLanding() {
   return (
     <div className="min-h-screen bg-warm-white text-ink">
       <Header />
