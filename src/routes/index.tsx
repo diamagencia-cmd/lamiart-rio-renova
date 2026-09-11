@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useRef, useState } from "react";
 import heroSala from "@/assets/hero-sala.jpg";
-import lamiartLogo from "@/assets/lamiart-logo-optimized.webp";
 import pisoLaminadoBg from "@/assets/foto-13-optimized.webp";
 import pisoVinilicoBg from "@/assets/foto-14-optimized.webp";
 import antesImg from "@/assets/antes-rio-optimized.webp";
@@ -119,9 +118,6 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-warm-white/85 backdrop-blur-md border-b border-border">
       <div className="container-x flex items-center justify-between h-16 md:h-20">
-        <a href="#inicio" className="flex items-center" aria-label="Pisos Laminados RJ">
-          <img src={lamiartLogo} alt="Pisos Laminados RJ" width={480} height={160} className="h-9 md:h-12 w-auto" fetchPriority="high" />
-        </a>
         <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-ink/80">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="hover:text-lamiart-red transition-colors">
@@ -722,8 +718,7 @@ function Footer() {
     <footer className="bg-ink text-warm-white/80 border-t border-white/10">
       <div className="container-x py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <img src={lamiartLogo} alt="Pisos Laminados RJ" width={480} height={160} loading="lazy" decoding="async" className="h-12 w-auto bg-warm-white rounded-md p-2" />
-          <p className="mt-3 text-sm leading-relaxed">
+          <p className="text-sm leading-relaxed">
             Pisos, revestimentos e soluções para transformar ambientes com beleza, conforto e praticidade.
           </p>
         </div>
