@@ -30,13 +30,13 @@ import vin6 from "@/assets/foto-30-optimized.webp";
 
 
 const WA_GERAL =
-  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pisos%20Laminados%20RJ%20e%20gostaria%20de%20um%20or%C3%A7amento.";
+  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20gostaria%20de%20um%20or%C3%A7amento.";
 const WA_LAMINADO =
-  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pisos%20Laminados%20RJ%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20laminado.";
+  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20laminado.";
 const WA_VINILICO =
-  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pisos%20Laminados%20RJ%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20vin%C3%ADlico.";
+  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20vin%C3%ADlico.";
 const WA_LAR =
-  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Pisos%20Laminados%20RJ%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
+  "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
 const MAPS =
   "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m6!3m5!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!16s%2Fg%2F11sfrkx9c5";
 const MAPS_REVIEWS =
@@ -46,9 +46,9 @@ const MAPS_EMBED =
 const INSTAGRAM = "https://www.instagram.com/lamiartpisosrepres/?hl=en";
 const FACEBOOK = "https://www.facebook.com/lamiartdecoracao/?locale=pt_BR";
 
-const SITE_TITLE = "Pisos Vinílicos e Laminados | Pisos Laminados RJ";
+const SITE_TITLE = "Pisos Vinílicos e Laminados | Laminado RJ";
 const SITE_DESC =
-  "Venda e instalação de pisos vinílicos e laminados no Rio de Janeiro. Transforme sua casa ou empresa com a Pisos Laminados RJ. Orçamento pelo WhatsApp e parcelamento em até 10x.";
+  "Venda e instalação de pisos vinílicos e laminados no Rio de Janeiro. Transforme sua casa ou empresa com a Laminado RJ. Orçamento pelo WhatsApp e parcelamento em até 10x.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -71,7 +71,7 @@ export const Route = createFileRoute("/")({
         children: JSON.stringify({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
-          name: "Pisos Laminados RJ",
+          name: "Laminado RJ",
           image: "https://lamiart.com.br/logo.png",
           url: "https://lamiart.com.br",
           telephone: "+552131452004",
@@ -88,7 +88,7 @@ export const Route = createFileRoute("/")({
       },
     ],
   }),
-  component: PisosLaminadosRJLanding,
+  component: LaminadoRJLanding,
 });
 
 const WhatsAppIcon = ({ className = "h-5 w-5" }: { className?: string }) => (
@@ -173,7 +173,7 @@ function Hero() {
           </h1>
           <p className="mt-5 text-base sm:text-lg text-warm-gray max-w-xl">
             Transforme sua casa ou empresa com pisos que trazem{" "}
-            <strong className="text-ink">conforto, beleza e aconchego</strong>. A Pisos Laminados RJ vende e instala pisos vinílicos e laminados com atendimento especializado no Rio de Janeiro.
+            <strong className="text-ink">conforto, beleza e aconchego</strong>. A Laminado RJ vende e instala pisos vinílicos e laminados com atendimento especializado no Rio de Janeiro.
           </p>
           <p className="mt-4 inline-block bg-ink text-warm-white text-xs sm:text-sm font-bold uppercase tracking-wider px-4 py-2 rounded-full">
             Renove seu ambiente e parcele em até 10x
@@ -202,7 +202,7 @@ function Hero() {
             <div className="absolute inset-0 bg-gradient-to-t from-ink/40 via-transparent to-transparent" />
           </div>
           <div className="absolute -top-3 -left-3 sm:-top-5 sm:-left-5 bg-lamiart-red text-white rounded-2xl px-4 py-3 shadow-red rotate-[-4deg]">
-            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider opacity-90">Pisos Laminados RJ</p>
+            <p className="text-[10px] sm:text-xs font-bold uppercase tracking-wider opacity-90">Laminado RJ</p>
             <p className="text-sm sm:text-base font-extrabold uppercase">Venda com Instalação</p>
           </div>
         </div>
@@ -296,7 +296,7 @@ function Produtos() {
             Escolha o piso ideal para o seu ambiente
           </h2>
           <p className="mt-4 text-warm-gray text-base sm:text-lg">
-            Na Pisos Laminados RJ, você encontra pisos vinílicos e laminados com{" "}
+            Na Laminado RJ, você encontra pisos vinílicos e laminados com{" "}
             <strong className="text-ink">venda e instalação no Rio de Janeiro</strong>.
           </p>
         </div>
@@ -362,7 +362,7 @@ function AntesDepois() {
         >
           <div className="relative aspect-[4/3] sm:aspect-[16/9]">
             <img src={antesImg} alt="Antes: ambiente frio sem piso instalado" width={1586} height={992} loading="lazy" decoding="async" className="absolute inset-0 w-full h-full object-cover" />
-            <img src={depoisImg} alt="Depois: ambiente renovado com piso da Pisos Laminados RJ" width={1586} height={992} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${revealed ? "opacity-100" : "opacity-0"}`} />
+            <img src={depoisImg} alt="Depois: ambiente renovado com piso da Laminado RJ" width={1586} height={992} loading="lazy" decoding="async" className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-700 ${revealed ? "opacity-100" : "opacity-0"}`} />
 
             <span className="absolute top-3 left-3 sm:top-4 sm:left-4 bg-warm-white/95 text-ink text-[10px] sm:text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">
               {revealed ? "Depois: ambiente renovado" : "Antes: ambiente frio"}
@@ -434,7 +434,7 @@ function Depoimentos() {
     { name: "José Saraiva", photo: cliJose, text: "Atendimento de primeira linha. Profissionais competentes para uma instalação primorosa." },
     { name: "Marli Nascimento", photo: cliMarli, text: "Fui bem atendida pela vendedora Luciana e na colocação também pelos 2 profissionais que estiveram em minha casa. Até o presente momento sem reclamações." },
     { name: "LETICIA REIS", photo: cliLeticia, text: "Fiz um pedido em 2019 e agora em 2023 fiz contato pelo whatsapp solicitando manutenção de algumas placas e frisos. O atendimento pelo telefone foi rápido e eficiente, consegui enviar fotos, receber um orçamento e agendar o atendimento para a semana seguinte. Durante a instalação o rapaz foi rápido e prezou pela limpeza. Estou bastante satisfeita e indico a amigos e familiares." },
-    { name: "Lais Martinelli", photo: cliLais, text: "Uma palavra especial para o Sr. Ricardo, o instalador do piso. Educado, profissional ótimo. Quanto à Pisos Laminados RJ, cliente fixa. Ótima Empresa. Parabéns pelo atendimento, orientações e serviço." },
+    { name: "Lais Martinelli", photo: cliLais, text: "Uma palavra especial para o Sr. Ricardo, o instalador do piso. Educado, profissional ótimo. Quanto à Laminado RJ, cliente fixa. Ótima Empresa. Parabéns pelo atendimento, orientações e serviço." },
     
   ];
   const scrollerRef = useRef<HTMLUListElement>(null);
@@ -451,10 +451,10 @@ function Depoimentos() {
         <div className="max-w-2xl">
           <span className="text-xs font-bold uppercase tracking-wider text-lamiart-red">Depoimentos</span>
           <h2 className="mt-2 font-display font-extrabold text-3xl sm:text-4xl text-ink leading-tight">
-            O que os clientes dizem sobre a Pisos Laminados RJ
+            O que os clientes dizem sobre a Laminado RJ
           </h2>
           <p className="mt-4 text-warm-gray text-base sm:text-lg">
-            Avaliações reais de clientes que confiaram na Pisos Laminados RJ para transformar seus ambientes.
+            Avaliações reais de clientes que confiaram na Laminado RJ para transformar seus ambientes.
           </p>
         </div>
       </div>
@@ -492,7 +492,7 @@ function Depoimentos() {
                 <img src={d.photo} alt={d.name} width={65} height={65} loading="lazy" decoding="async" className="h-10 w-10 rounded-full object-cover" />
                 <div>
                   <p className="font-display font-semibold text-ink text-sm">{d.name}</p>
-                  <p className="text-xs text-warm-gray">Cliente Pisos Laminados RJ</p>
+                  <p className="text-xs text-warm-gray">Cliente Laminado RJ</p>
                 </div>
               </div>
             </li>
@@ -535,7 +535,7 @@ function CatalogGrid({
           {images.map(({ src, w, h }, i) => (
             <figure key={i} className="group relative aspect-square overflow-hidden rounded-2xl bg-beige-light shadow-soft">
               <img
-                src={src} alt={`${overlay} Pisos Laminados RJ ${i + 1}`} width={w} height={h} loading="lazy" decoding="async"
+                src={src} alt={`${overlay} Laminado RJ ${i + 1}`} width={w} height={h} loading="lazy" decoding="async"
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
               <figcaption className="absolute bottom-2 left-2 right-2 bg-ink/75 text-warm-white text-[11px] sm:text-xs font-semibold px-3 py-1.5 rounded-full text-center backdrop-blur-sm">
@@ -565,7 +565,7 @@ function RedesSociais() {
       <div className="container-x">
         <div className="max-w-2xl">
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl leading-tight">
-            Acompanhe a Pisos Laminados RJ nas redes sociais
+             Acompanhe a Laminado RJ nas redes sociais
           </h2>
           <p className="mt-4 text-warm-white/85 text-base sm:text-lg">
             Veja ideias, inspirações e transformações de ambientes.
@@ -577,7 +577,7 @@ function RedesSociais() {
               <div className="relative w-full" style={{ aspectRatio: "9 / 14" }}>
                 <iframe
                   src={`${url}embed`}
-                  title="Post da Pisos Laminados RJ no Instagram"
+                  title="Post da Laminado RJ no Instagram"
                   className="absolute inset-0 w-full h-full border-0"
                   loading="lazy"
                   allow="encrypted-media"
@@ -589,7 +589,7 @@ function RedesSociais() {
         </div>
         <div className="mt-8 flex justify-center">
           <a href={INSTAGRAM} target="_blank" rel="noopener" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-warm-white text-lamiart-red font-display font-bold hover:bg-warm-white/90 transition-colors">
-            Ver Instagram da Pisos Laminados RJ
+            Ver Instagram da Laminado RJ
           </a>
         </div>
       </div>
@@ -603,7 +603,7 @@ function Localizacao() {
       <div className="container-x">
         <div className="max-w-2xl">
           <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-ink leading-tight">
-            Visite a Pisos Laminados RJ no <span className="text-lamiart-red">Méier</span>
+            Visite a Laminado RJ no <span className="text-lamiart-red">Méier</span>
           </h2>
           <p className="mt-4 text-warm-gray text-base sm:text-lg">
             Venha conhecer opções de pisos laminados, vinílicos e revestimentos para o seu projeto.
@@ -613,7 +613,7 @@ function Localizacao() {
           <div className="card-soft overflow-hidden relative min-h-[320px] lg:min-h-full order-2 lg:order-1">
             <iframe
               src={MAPS_EMBED}
-              title="Localização da Pisos Laminados RJ no Google Maps"
+              title="Localização da Laminado RJ no Google Maps"
               className="absolute inset-0 w-full h-full border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
@@ -652,11 +652,11 @@ function Localizacao() {
 function Faq() {
   const items = [
     { q: "Qual a diferença entre piso vinílico e piso laminado?", a: "O piso laminado tem visual amadeirado e ótimo custo-benefício para ambientes internos. O piso vinílico é moderno, confortável, silencioso e muito prático para residências e espaços comerciais. A melhor escolha depende do ambiente, uso e objetivo do projeto." },
-    { q: "A Pisos Laminados RJ faz venda e instalação?", a: "Sim. A Pisos Laminados RJ trabalha com venda e instalação de pisos vinílicos e laminados no Rio de Janeiro." },
-    { q: "Posso parcelar meu piso?", a: "Sim. A Pisos Laminados RJ oferece parcelamento em até 10x. Fale com a equipe pelo WhatsApp para consultar as condições." },
+    { q: "A Laminado RJ faz venda e instalação?", a: "Sim. A Laminado RJ trabalha com venda e instalação de pisos vinílicos e laminados no Rio de Janeiro." },
+    { q: "Posso parcelar meu piso?", a: "Sim. A Laminado RJ oferece parcelamento em até 10x. Fale com a equipe pelo WhatsApp para consultar as condições." },
     { q: "O piso vinílico é indicado para empresas?", a: "Sim. O piso vinílico pode ser uma ótima opção para escritórios, lojas e ambientes comerciais, pois oferece conforto, praticidade e visual moderno." },
     { q: "O piso laminado deixa o ambiente mais aconchegante?", a: "Sim. O piso laminado traz o visual da madeira e ajuda a criar uma sensação mais quente, elegante e acolhedora no ambiente." },
-    { q: "Atendem em todo o Rio de Janeiro?", a: "A Pisos Laminados RJ atende clientes no Rio de Janeiro. Para confirmar disponibilidade de instalação na sua região, fale pelo WhatsApp." },
+    { q: "Atendem em todo o Rio de Janeiro?", a: "A Laminado RJ atende clientes no Rio de Janeiro. Para confirmar disponibilidade de instalação na sua região, fale pelo WhatsApp." },
     { q: "Preciso ir até a loja?", a: "Você pode falar primeiro pelo WhatsApp para tirar dúvidas e pedir orçamento. Se preferir, também pode visitar a loja no Méier." },
   ];
   return (
@@ -701,7 +701,7 @@ function CtaFinal() {
           Pronto para transformar <span className="text-lamiart-red">seu ambiente?</span>
         </h2>
         <p className="mt-5 text-warm-white/75 text-base sm:text-lg">
-          Fale com a Pisos Laminados RJ e descubra a melhor opção de piso para sua casa, apartamento, escritório ou loja.
+          Fale com a Laminado RJ e descubra a melhor opção de piso para sua casa, apartamento, escritório ou loja.
         </p>
         <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
           <a href={WA_GERAL} target="_blank" rel="noopener" className="btn-whatsapp text-base">
@@ -739,13 +739,13 @@ function Footer() {
         <div>
           <h3 className="font-display font-semibold text-warm-white mb-3 text-sm uppercase tracking-wider">Redes sociais</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href={INSTAGRAM} target="_blank" rel="noopener" className="hover:text-warm-white">Instagram Pisos Laminados RJ</a></li>
+            <li><a href={INSTAGRAM} target="_blank" rel="noopener" className="hover:text-warm-white">Instagram Laminado RJ</a></li>
           </ul>
         </div>
       </div>
       <div className="border-t border-white/10">
         <div className="container-x py-5 text-xs text-warm-white/60 text-center">
-          © 2026 Pisos Laminados RJ. Todos os direitos reservados.
+          © 2026 Laminado RJ. Todos os direitos reservados.
         </div>
       </div>
     </footer>
@@ -784,7 +784,7 @@ function AntesDepoisBanner() {
               <figcaption className="absolute top-3 left-3 bg-black/70 text-white text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider">Antes</figcaption>
             </figure>
             <figure className="relative rounded-2xl overflow-hidden shadow-warm">
-              <img src={depoisPisoImg} alt="Piso depois da instalação da Pisos Laminados RJ" width={512} height={512} loading="lazy" decoding="async" className="w-full h-64 md:h-80 object-cover" />
+              <img src={depoisPisoImg} alt="Piso depois da instalação da Laminado RJ" width={512} height={512} loading="lazy" decoding="async" className="w-full h-64 md:h-80 object-cover" />
               <figcaption className="absolute top-3 left-3 bg-white text-lamiart-red text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Depois</figcaption>
             </figure>
           </div>
@@ -794,7 +794,7 @@ function AntesDepoisBanner() {
   );
 }
 
-function PisosLaminadosRJLanding() {
+function LaminadoRJLanding() {
   return (
     <div className="min-h-screen bg-warm-white text-ink">
       <Header />
