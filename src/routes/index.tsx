@@ -744,7 +744,7 @@ function Footer() {
         <div>
           <h3 className="font-display font-semibold text-warm-white mb-3 text-sm uppercase tracking-wider">Redes sociais</h3>
           <ul className="space-y-2 text-sm">
-            <li><a href={INSTAGRAM} target="_blank" rel="noopener" className="hover:text-warm-white">Instagram @lamiartpisosrepres</a></li>
+            <li><a href={INSTAGRAM} target="_blank" rel="noopener" className="hover:text-warm-white">Instagram Pisos Laminados RJ</a></li>
           </ul>
         </div>
       </div>
