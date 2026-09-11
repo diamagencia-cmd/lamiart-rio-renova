@@ -125,7 +125,7 @@ function Header() {
             </a>
           ))}
         </nav>
-        <div className="flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-2">
           <a href={WA_GERAL} target="_blank" rel="noopener" className="hidden sm:inline-flex btn-primary text-sm py-2.5 px-4">
             Solicitar orçamento
           </a>
