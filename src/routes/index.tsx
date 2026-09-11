@@ -72,8 +72,7 @@ export const Route = createFileRoute("/")({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "Laminado RJ",
-          image: "https://lamiart.com.br/logo.png",
-          url: "https://lamiart.com.br",
+          url: "https://lplamiart.diamondagenciamarketing.com/",
           telephone: "+552131452004",
           address: {
             "@type": "PostalAddress",
