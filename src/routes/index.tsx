@@ -37,12 +37,8 @@ const WA_VINILICO =
   "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20vin%C3%ADlico.";
 const WA_LAR =
   "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
-const MAPS =
-  "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m6!3m5!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!16s%2Fg%2F11sfrkx9c5";
 const MAPS_REVIEWS =
   "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m8!3m7!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!9m1!1b1!16s%2Fg%2F11sfrkx9c5";
-const MAPS_EMBED =
-  "https://www.google.com/maps?q=L%C3%A2miart+Pisos+e+Revestimentos+Ltda,+Rua+M%C3%A1rio+Piragibe,+43,+M%C3%A9ier,+Rio+de+Janeiro&output=embed";
 const INSTAGRAM = "https://www.instagram.com/lamiartpisosrepres/?hl=en";
 const FACEBOOK = "https://www.facebook.com/lamiartdecoracao/?locale=pt_BR";
 
@@ -112,7 +108,6 @@ function Header() {
     { href: "#depoimentos", label: "Depoimentos" },
     { href: "#catalogo", label: "Catálogo" },
     { href: "#faq", label: "FAQ" },
-    { href: "#localizacao", label: "Localização" },
   ];
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-warm-white/85 backdrop-blur-md border-b border-border">
@@ -596,57 +591,6 @@ function RedesSociais() {
   );
 }
 
-function Localizacao() {
-  return (
-    <section id="localizacao" className="section-pad">
-      <div className="container-x">
-        <div className="max-w-2xl">
-          <h2 className="font-display font-extrabold text-3xl sm:text-4xl text-ink leading-tight">
-            Visite a Laminado RJ no <span className="text-lamiart-red">Méier</span>
-          </h2>
-          <p className="mt-4 text-warm-gray text-base sm:text-lg">
-            Venha conhecer opções de pisos laminados, vinílicos e revestimentos para o seu projeto.
-          </p>
-        </div>
-        <div className="mt-10 grid lg:grid-cols-2 gap-6">
-          <div className="card-soft overflow-hidden relative min-h-[320px] lg:min-h-full order-2 lg:order-1">
-            <iframe
-              src={MAPS_EMBED}
-              title="Localização da Laminado RJ no Google Maps"
-              className="absolute inset-0 w-full h-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              allowFullScreen
-            />
-          </div>
-          <div className="card-soft p-6 sm:p-8 order-1 lg:order-2">
-            <h3 className="font-display font-bold text-xl text-ink">Endereço e atendimento</h3>
-            <p className="mt-3 text-ink">Rua Mário Piragibe, 43 — Méier — RJ</p>
-            <dl className="mt-5 space-y-3 text-sm">
-              <div className="flex items-start gap-3">
-                <dt className="font-semibold text-warm-gray w-24 shrink-0">Seg a Sex</dt>
-                <dd className="text-ink m-0">08h às 17h</dd>
-              </div>
-              <div className="flex items-start gap-3">
-                <dt className="font-semibold text-warm-gray w-24 shrink-0">Sábado</dt>
-                <dd className="text-ink m-0">08h às 13h</dd>
-              </div>
-              <div className="flex items-start gap-3">
-                <dt className="font-semibold text-warm-gray w-24 shrink-0">WhatsApp</dt>
-                <dd className="m-0">
-                  <a href={WA_GERAL} target="_blank" rel="noopener" className="text-whatsapp font-semibold">21 99828-6443</a>
-                </dd>
-              </div>
-            </dl>
-            <a href={MAPS} target="_blank" rel="noopener" className="btn-primary mt-7 w-full sm:w-auto">
-              Ir até lá
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
 
 function Faq() {
   const items = [
@@ -731,7 +675,6 @@ function Footer() {
         <div>
           <h3 className="font-display font-semibold text-warm-white mb-3 text-sm uppercase tracking-wider">Contato</h3>
           <ul className="space-y-2 text-sm">
-            <li>Rua Mário Piragibe, 43 — Méier — RJ</li>
             <li><a href={WA_GERAL} target="_blank" rel="noopener" className="hover:text-warm-white">WhatsApp: 21 99828-6443</a></li>
           </ul>
         </div>
@@ -807,8 +750,6 @@ function LaminadoRJLanding() {
         <CatalogGrid id="catalogo" title="Catálogo de pisos laminados" subtitle="Veja algumas opções de texturas, tons e acabamentos para transformar seu ambiente." overlay="Laminados" cta="Pedir orçamento de piso laminado" href={WA_LAMINADO} images={[{ src: lam1, w: 808, h: 788 }, { src: lam2, w: 900, h: 1200 }, { src: lam3, w: 600, h: 600 }, { src: lam4, w: 1032, h: 581 }, { src: lam5, w: 900, h: 1200 }, { src: lam6, w: 1024, h: 768 }]} />
         <AntesDepoisBanner />
         <CatalogGrid id="catalogo-vinilico" title="Catálogo de pisos vinílicos" subtitle="Opções modernas, práticas e confortáveis para casas, apartamentos, lojas e escritórios." overlay="Vinílicos" cta="Pedir orçamento de piso vinílico" href={WA_VINILICO} images={[{ src: vin1, w: 1200, h: 900 }, { src: vin2, w: 1200, h: 900 }, { src: vin3, w: 800, h: 800 }, { src: vin4, w: 768, h: 1024 }, { src: vin5, w: 900, h: 1200 }, { src: vin6, w: 900, h: 1200 }]} />
-        
-        <Localizacao />
         <Faq />
         <CtaFinal />
       </main>
