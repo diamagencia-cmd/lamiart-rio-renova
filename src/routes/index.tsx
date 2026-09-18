@@ -37,12 +37,8 @@ const WA_VINILICO =
   "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20piso%20vin%C3%ADlico.";
 const WA_LAR =
   "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
-const MAPS =
-  "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m6!3m5!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!16s%2Fg%2F11sfrkx9c5";
 const MAPS_REVIEWS =
   "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m8!3m7!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!9m1!1b1!16s%2Fg%2F11sfrkx9c5";
-const MAPS_EMBED =
-  "https://www.google.com/maps?q=L%C3%A2miart+Pisos+e+Revestimentos+Ltda,+Rua+M%C3%A1rio+Piragibe,+43,+M%C3%A9ier,+Rio+de+Janeiro&output=embed";
 const INSTAGRAM = "https://www.instagram.com/lamiartpisosrepres/?hl=en";
 const FACEBOOK = "https://www.facebook.com/lamiartdecoracao/?locale=pt_BR";
 
