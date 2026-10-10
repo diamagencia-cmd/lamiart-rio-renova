@@ -39,7 +39,7 @@ const WA_LAR =
   "https://wa.me/5521998286443?text=Ol%C3%A1%2C%20vim%20do%20site%20da%20Laminado%20RJ%20e%20quero%20mudar%20meu%20lar%20com%20pisos%20laminados%20ou%20vin%C3%ADlicos.";
 const MAPS_REVIEWS =
   "https://www.google.com/maps/place/L%C3%A2miart+Pisos+e+Revestimentos+Ltda/@-22.9094224,-43.2878216,17z/data=!4m8!3m7!1s0x997d50ad7890f3:0xecc065c118c628ac!8m2!3d-22.9094224!4d-43.2852467!9m1!1b1!16s%2Fg%2F11sfrkx9c5";
-const INSTAGRAM = "https://www.instagram.com/lamiartpisosrepres/?hl=en";
+const INSTAGRAM = "https://www.instagram.com/laminadorj?utm_source=ig_web_button_share_sheet&vrfl=ZDNlZDc0MzIxNw==";
 const FACEBOOK = "https://www.facebook.com/lamiartdecoracao/?locale=pt_BR";
 
 const SITE_TITLE = "Pisos Vinílicos e Laminados | Laminado RJ";
