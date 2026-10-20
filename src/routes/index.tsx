@@ -116,7 +116,7 @@ function Header() {
         <a href="#inicio" className="flex items-center shrink-0" aria-label="Laminado RJ — voltar ao início">
           <img src={logoLaminadoRj} alt="Laminado RJ — Pisos e Revestimentos" width={512} height={512} fetchPriority="high" decoding="async" className="h-11 md:h-16 w-auto" />
         </a>
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-ink/80">
+        <nav className="hidden lg:flex items-center gap-6 lg:ml-10 text-sm font-medium text-ink/80">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="hover:text-lamiart-red transition-colors">
               {l.label}
@@ -665,7 +665,7 @@ function Footer() {
     <footer className="bg-ink text-warm-white/80 border-t border-white/10">
       <div className="container-x py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
-          <img src={logoLaminadoRj} alt="Laminado RJ — Pisos e Revestimentos" width={512} height={512} loading="lazy" decoding="async" className="h-16 w-auto mb-4" />
+          <img src={logoLaminadoRj} alt="Laminado RJ — Pisos e Revestimentos" width={512} height={512} loading="lazy" decoding="async" className="h-20 w-auto mb-4" />
           <p className="text-sm leading-relaxed">
             Pisos, revestimentos e soluções para transformar ambientes com beleza, conforto e praticidade.
           </p>
