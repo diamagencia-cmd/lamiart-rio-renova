@@ -9,6 +9,7 @@ import logoTarkett from "@/assets/logo-tarkett.png";
 
 import logoQuickStep from "@/assets/logo-quick-step-optimized.webp";
 import logoDurafloor from "@/assets/logo-durafloor-optimized.webp";
+import logoLaminadoRj from "@/assets/logo-laminado-rj.webp";
 import cliRogerio from "@/assets/cliente-rogerio.png";
 import cliClaudio from "@/assets/cliente-claudio.png";
 import cliJose from "@/assets/cliente-jose.png";
@@ -112,7 +113,10 @@ function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-warm-white/85 backdrop-blur-md border-b border-border">
       <div className="container-x flex items-center justify-between h-16 md:h-20">
-        <nav className="hidden lg:flex items-center gap-6 text-sm font-medium text-ink/80">
+        <a href="#inicio" className="flex items-center shrink-0" aria-label="Laminado RJ — voltar ao início">
+          <img src={logoLaminadoRj} alt="Laminado RJ — Pisos e Revestimentos" width={512} height={512} fetchPriority="high" decoding="async" className="h-11 md:h-16 w-auto" />
+        </a>
+        <nav className="hidden lg:flex items-center gap-6 lg:ml-10 text-sm font-medium text-ink/80">
           {links.map((l) => (
             <a key={l.href} href={l.href} className="hover:text-lamiart-red transition-colors">
               {l.label}
@@ -661,6 +665,7 @@ function Footer() {
     <footer className="bg-ink text-warm-white/80 border-t border-white/10">
       <div className="container-x py-14 grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
         <div>
+          <img src={logoLaminadoRj} alt="Laminado RJ — Pisos e Revestimentos" width={512} height={512} loading="lazy" decoding="async" className="h-20 w-auto mb-4" />
           <p className="text-sm leading-relaxed">
             Pisos, revestimentos e soluções para transformar ambientes com beleza, conforto e praticidade.
           </p>
